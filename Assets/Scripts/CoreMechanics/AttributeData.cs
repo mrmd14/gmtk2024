@@ -7,18 +7,10 @@ public class AttributeData : MonoBehaviour
 
    
 
-    public static float EnvironmentalCondition=> values[0];
-    public static float Satisfaction => values[1];
-    public static float Economy => values[2];
-    public static float Health => values[3];
-    public static float Spirituality => values[4];
-    public static float Science => values[5];
-
-
  
 
 
-    public static float[] values = new float[6];
+    public static float[] values = new float[7];
 
    
 
@@ -33,6 +25,7 @@ public enum Attributes
     Health = 3,
     Spirituality  = 4,
     Science = 5,
+    intelegence = 6,
 
 }
 

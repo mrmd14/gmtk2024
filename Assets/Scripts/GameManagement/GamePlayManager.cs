@@ -30,6 +30,11 @@ public class GamePlayManager : MonoBehaviour
 
     public GameEvent last;
 
+
+
+    public static Dictionary<Attributes, AttributeInitVal> AttributeInitValMap;
+
+
     private void Awake()
     {
         instance = this;
@@ -54,9 +59,19 @@ public class GamePlayManager : MonoBehaviour
 
     private void Init()
     {
-        for (int i = 0; i < 5; ++i)
+
+        // set map 
+
+        AttributeInitValMap.Clear();
+
+        foreach (var item in  data.attributeInitVals)
         {
-            AttributeData.values[i] = data.statsInitalVal;
+            
+            AttributeInitValMap[item.attribute] = item;
+        }
+        foreach(var item in AttributeInitValMap)
+        {
+            AttributeData.values[(int)item.Key] = item.Value.statsInitalVal;
         }
 
 
@@ -149,7 +164,7 @@ public class GamePlayManager : MonoBehaviour
         }
 
         string statText = "";
-         for(int i = 0; i < 6; ++i)
+         for(int i = 0; i < AttributeInitValMap.Count; ++i)
         {
             statText += $" {(Attributes)i} =  {AttributeData.values[i]}" ;
         }

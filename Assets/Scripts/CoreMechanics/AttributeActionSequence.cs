@@ -25,6 +25,10 @@ public class AttributeAction
 
     public void Do()
     {
-        AttributeData.values[(int)attribute] += AddValue;
+
+        if (!GamePlayManager.AttributeInitValMap.ContainsKey(attribute)) return;
+        var range = GamePlayManager.AttributeInitValMap[attribute];
+
+        AttributeData.values[(int)attribute] =  Mathf.Clamp(AttributeData.values[(int)attribute] + AddValue, range.MinVal,range.MaxVal ) ;
     }
 }
