@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.WSA;
 
 public class GamePlayManager : MonoBehaviour
 {
@@ -78,7 +79,10 @@ public class GamePlayManager : MonoBehaviour
         // float Set Score and find max 
         float maxi = -1000;
         var destList = last.ReadFromForNext.Count == 0 ? runtTimeGameEvents : last.ReadFromForNext;
-        
+
+
+
+      
         foreach (var item in destList)
         {
             
@@ -88,17 +92,17 @@ public class GamePlayManager : MonoBehaviour
         }
 
         randomList.Clear();
-
+        print(maxi);
         foreach (var item in destList)
         {
-         
+            print(Mathf.Abs(maxi - item.currentScore));
             if(Mathf.Abs( maxi - item.currentScore) <
                 data.DistanceFromMaxToConsiderForEvent)
             {
                 randomList.Add(item);
             }
         }
-
+   
         if (randomList.Count == 0) return;
 
         last = randomList[Random.Range(0, randomList.Count)];

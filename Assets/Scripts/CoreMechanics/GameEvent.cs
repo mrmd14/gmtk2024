@@ -21,7 +21,7 @@ public class GameEvent : ScriptableObject
             currentScore += item.GetScore();
         }
 
-        return (currentScore==0? -1000: currentScore);
+        return currentScore;
     }
 
    [HideInInspector] public float currentScore = 0;

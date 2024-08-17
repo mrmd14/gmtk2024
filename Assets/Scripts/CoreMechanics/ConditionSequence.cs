@@ -39,19 +39,19 @@ public class Condition
         switch (compare)
         {
             case Compare.Less:
-                isMet = value < keyVal;
+                isMet = keyVal < value ;
                 break;
             case Compare.LessOrEqual:
-                isMet = value <= keyVal;
+                isMet = keyVal <= value;
                 break;
             case Compare.Equal:
                 isMet = value == keyVal;
                 break;
             case Compare.GreaterOrEqual:
-                isMet = value >=  keyVal;
+                isMet = keyVal >=  value ;
                 break;
             case Compare.Greater:
-                isMet = value > keyVal;
+                isMet = keyVal > value;
                 break;
             
         }
