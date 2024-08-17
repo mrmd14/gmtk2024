@@ -1,31 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
 
 
+
+
+    public enum State
+    {
+        small  = 0,
+        mid = 1,
+        big = 2,
+    }
+
+    public State currentState = State.mid;
+
     public AttributeActionSequence makeBig;
     public AttributeActionSequence makeSmall;
 
 
 
-    [Header("DONT TOUCH")]
 
-    public AddBtnToBox makeBigBTN;
-    public AddBtnToBox makeSmallBTN;
+    
 
 
 
-    private void Start()
+
+    public void Init()
     {
-        makeBigBTN.action = GoBig;
-        makeSmallBTN.action = GoSmall;
+        currentState = State.mid;
     }
 
-    private void GoBig()
+
+    
+
+    public  void GoBig()
     {
+        if(currentState == State.big)
+        {
+            return;
+        }
         if (!GamePlayManager.isPlayerTurn) return;
         makeBig.Do();
 
@@ -35,8 +53,12 @@ public class Agent : MonoBehaviour
 
     }
 
-    private void GoSmall()
+    public void GoSmall()
     {
+        if (currentState == State.small)
+        {
+            return;
+        }
         if (!GamePlayManager.isPlayerTurn) return;
         makeSmall.Do();
 

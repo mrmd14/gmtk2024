@@ -32,7 +32,10 @@ public class GamePlayManager : MonoBehaviour
 
 
 
-    public static Dictionary<Attributes, AttributeInitVal> AttributeInitValMap;
+    public static Dictionary<Attributes, AttributeInitVal> AttributeInitValMap = new Dictionary<Attributes, AttributeInitVal>();
+
+
+  [SerializeField]  List<Stage> stages;
 
 
     private void Awake()
@@ -60,6 +63,9 @@ public class GamePlayManager : MonoBehaviour
     private void Init()
     {
 
+
+        StageManager.instance.Init();
+
         // set map 
 
         AttributeInitValMap.Clear();
@@ -79,6 +85,17 @@ public class GamePlayManager : MonoBehaviour
         foreach (var item in gameEvents.mainPool)
         {
             runtTimeGameEvents.Add(item);
+        }
+
+
+        // init agent UI 
+
+        foreach(var item in stages)
+        {
+            foreach(var agentUI in item.refrenceToAgents)
+            {
+                agentUI.init();
+            }
         }
 
         RunRandomEvent();

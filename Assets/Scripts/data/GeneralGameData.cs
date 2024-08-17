@@ -18,5 +18,8 @@ public class GeneralGameData : ScriptableObject
 
     public List<AttributeInitVal> attributeInitVals;
 
+
+    
+
   
 }
