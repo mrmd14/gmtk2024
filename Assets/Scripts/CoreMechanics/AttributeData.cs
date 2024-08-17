@@ -10,7 +10,11 @@ public class AttributeData : MonoBehaviour
  
 
 
-    public static float[] values = new float[7];
+    public static float[] values = new float[maxLen];
+    public static float[] CurrentBaseValue = new float[maxLen];
+
+
+    private const int maxLen = 8;
 
    
 
@@ -26,6 +30,13 @@ public enum Attributes
     Spirituality  = 4,
     Science = 5,
     intelegence = 6,
+    temperature = 7,
 
 }
+
+
+
+
+
+
 

@@ -15,6 +15,14 @@ public class AttributeActionSequence
             item.Do();
         }
     }
+
+    public void DoOnBase()
+    {
+        foreach (var item in attributeActions)
+        {
+            item.DoOnBase();
+        }
+    }
 }
 
 [System.Serializable]
@@ -30,5 +38,14 @@ public class AttributeAction
         var range = GamePlayManager.AttributeInitValMap[attribute];
 
         AttributeData.values[(int)attribute] =  Mathf.Clamp(AttributeData.values[(int)attribute] + AddValue, range.MinVal,range.MaxVal ) ;
+    }
+
+    public void DoOnBase()
+    {
+
+        if (!GamePlayManager.AttributeInitValMap.ContainsKey(attribute)) return;
+        var range = GamePlayManager.AttributeInitValMap[attribute];
+
+        AttributeData.CurrentBaseValue[(int)attribute] = Mathf.Clamp(AttributeData.CurrentBaseValue[(int)attribute] + AddValue, range.MinVal, range.MaxVal);
     }
 }

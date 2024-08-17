@@ -30,3 +30,9 @@ MonoBehaviour:
     statsInitalVal: 0
     MinVal: -2
     MaxVal: 2
+  - attribute: 7
+    statsInitalVal: 0
+    MinVal: -2
+    MaxVal: 2
+  HidenToMainAttribute:
+  - {fileID: 11400000, guid: 322a2898598a6594da5cee6f7723d6dd, type: 2}

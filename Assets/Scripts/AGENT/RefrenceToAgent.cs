@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class RefrenceToAgent : MonoBehaviour
@@ -10,6 +11,9 @@ public class RefrenceToAgent : MonoBehaviour
     public Agent agent;
 
     public Stage stage;
+
+
+    public TextMeshPro text;
 
 
 
@@ -38,7 +42,7 @@ public class RefrenceToAgent : MonoBehaviour
 
     private void OnEnable()
     {
-    
+        text.text = gameObject.name;
         hovering = false;
     }
 

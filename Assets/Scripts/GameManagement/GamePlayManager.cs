@@ -37,6 +37,8 @@ public class GamePlayManager : MonoBehaviour
 
   [SerializeField]  List<Stage> stages;
 
+    public Dictionary<GameEvent,bool> triggered = new Dictionary<GameEvent, bool>();
+
 
     private void Awake()
     {
@@ -45,6 +47,7 @@ public class GamePlayManager : MonoBehaviour
 
     public void TriggerEvent(GameEvent gameEvent)
     {
+        triggered[gameEvent] = true;
         LastEventText.text =  gameEvent.eventText;
         foreach(var item in gameEvent.ResultSequence.attributeActions)
         {
@@ -103,7 +106,7 @@ public class GamePlayManager : MonoBehaviour
 
     }
 
-    private void RunScoredEvent()
+    private void RunScoredEvent(bool forceMain )
     {
 
 
@@ -111,10 +114,11 @@ public class GamePlayManager : MonoBehaviour
         // float Set Score and find max 
         float maxi = -1000;
         var destList = last.ReadFromForNext.Count == 0 ? runtTimeGameEvents : last.ReadFromForNext;
+        if (forceMain) destList = runtTimeGameEvents;
 
 
 
-      
+
         foreach (var item in destList)
         {
             
@@ -127,7 +131,8 @@ public class GamePlayManager : MonoBehaviour
         print(maxi);
         foreach (var item in destList)
         {
-            print(Mathf.Abs(maxi - item.currentScore));
+            if (item.currentScore == -1000) continue;
+
             if(Mathf.Abs( maxi - item.currentScore) <
                 data.DistanceFromMaxToConsiderForEvent)
             {
@@ -135,7 +140,15 @@ public class GamePlayManager : MonoBehaviour
             }
         }
    
-        if (randomList.Count == 0) return;
+        if (randomList.Count == 0)
+        {
+            if(destList != runtTimeGameEvents)
+            {
+                // force main 
+                RunScoredEvent(true);
+                return;
+            }
+        }
 
         last = randomList[Random.Range(0, randomList.Count)];
 
@@ -156,7 +169,7 @@ public class GamePlayManager : MonoBehaviour
 
     public void DoEnv()
     {
-        RunScoredEvent();
+        RunScoredEvent(false);
     }
 
 
@@ -179,13 +192,34 @@ public class GamePlayManager : MonoBehaviour
         {
             DoEnv();
         }
-
+        SetValues();
         string statText = "";
-         for(int i = 0; i < AttributeInitValMap.Count; ++i)
+        foreach(var item in AttributeInitValMap)
         {
-            statText += $" {(Attributes)i} =  {AttributeData.values[i]}" ;
+            statText += $"  {item.Key} = {AttributeData.values[(int)item.Key]} ";
         }
         stats.text = statText;
 
+     
+
     }
+
+
+
+
+    private void SetValues()
+    {
+        for (int i = 0;i<AttributeData.CurrentBaseValue.Length;++i)
+        {
+            AttributeData.values[i] = AttributeData.CurrentBaseValue[i];
+        }
+
+
+        foreach(var item in data.HidenToMainAttribute)
+        {
+            item.Set();
+        }
+    }
+
+
 }

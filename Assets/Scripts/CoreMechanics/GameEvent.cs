@@ -8,6 +8,7 @@ public class GameEvent : ScriptableObject
     [TextArea] public  string eventText = "";
 
     public ConditionSequence conditionSequence;
+  
     public AttributeActionSequence ResultSequence;
 
     public  List<GameEvent>  ReadFromForNext;
@@ -15,12 +16,8 @@ public class GameEvent : ScriptableObject
 
     public  float  SetScore()
     {
-        currentScore = 0;
-        foreach(var item in conditionSequence.list)
-        {
-            currentScore += item.GetScore();
-        }
-
+        if (conditionSequence.isMet()) currentScore = conditionSequence.score;
+        else currentScore = -1000;
         return currentScore;
     }
 

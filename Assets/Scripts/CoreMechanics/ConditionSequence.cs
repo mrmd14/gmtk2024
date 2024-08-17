@@ -6,32 +6,73 @@ using UnityEngine;
 [System.Serializable]
 public class ConditionSequence 
 {
+
+    public float score = 0;
     public List<Condition> list;
 
 
-
-    public float SumScore()
+    public bool isMet()
     {
-        float res = 0;
         foreach(var item in list)
         {
-            res += item.GetScore();
+            if (item.IsMet()) return true;
+
         }
 
-        return res;
+        return  (list.Count == 0) ;
+
+
     }
+
+
+
+   
 }
 
 [System.Serializable]
 public class Condition
 {
-    public float score = 0;
+    public List< GameEvent> gameEvents;
+
+    public List<ConditionItem> list;
+
+    public bool IsMet()
+    {
+        foreach(var item in gameEvents)
+        {
+            if (!GamePlayManager.instance.triggered.ContainsKey(item))
+            {
+                return false;
+            }
+        }
+        foreach (var item in list)
+        {
+            if (!item.IsMet()) return false;
+        }
+
+
+
+        return true;
+
+
+
+    }
+}
+
+[System.Serializable]
+public class ConditionItem
+{
+
     public Compare compare;
     public Attributes attribute;
+
+
+
+
     public float value = 0;
 
 
-    public float GetScore()
+    public bool  IsMet()
     {
         float keyVal = AttributeData.values[(int)attribute];
         bool isMet = false;
@@ -56,7 +97,7 @@ public class Condition
             
         }
 
-        return (isMet ? score : 0);
+        return isMet;
 
 
     }

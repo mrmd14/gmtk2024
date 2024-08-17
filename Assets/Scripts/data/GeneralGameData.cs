@@ -18,6 +18,8 @@ public class GeneralGameData : ScriptableObject
 
     public List<AttributeInitVal> attributeInitVals;
 
+    public List<HidenToMainAttribute> HidenToMainAttribute;
+
 
     
 

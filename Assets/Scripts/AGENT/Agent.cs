@@ -45,7 +45,7 @@ public class Agent : MonoBehaviour
             return;
         }
         if (!GamePlayManager.isPlayerTurn) return;
-        makeBig.Do();
+        makeBig.DoOnBase();
 
         GamePlayManager.isPlayerTurn = false;
 
@@ -60,7 +60,7 @@ public class Agent : MonoBehaviour
             return;
         }
         if (!GamePlayManager.isPlayerTurn) return;
-        makeSmall.Do();
+        makeSmall.DoOnBase();
 
         GamePlayManager.isPlayerTurn = false;
 

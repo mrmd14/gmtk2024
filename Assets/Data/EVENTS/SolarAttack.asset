@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventText: SolarAttack
   conditionSequence:
+    score: 0
     list:
-    - score: 1
-      compare: 3
-      attribute: 5
-      value: 3
+    - gameEvents: []
+      list:
+      - compare: 0
+        attribute: 0
+        value: 0
+    - gameEvents: []
+      list: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
