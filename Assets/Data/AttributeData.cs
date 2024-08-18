@@ -10,8 +10,8 @@ public class AttributeData : MonoBehaviour
  
 
 
-    public static float[] values = new float[maxLen];
-    public static float[] CurrentBaseValue = new float[maxLen];
+    public static Dictionary<Attributes, float  > values = new Dictionary<Attributes, float>();
+    public static Dictionary<Attributes, float> CurrentBaseValue = new Dictionary<Attributes, float>();
 
 
     private const int maxLen = 11;

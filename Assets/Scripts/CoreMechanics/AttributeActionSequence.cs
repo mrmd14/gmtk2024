@@ -37,7 +37,7 @@ public class AttributeAction
         if (!GamePlayManager.AttributeInitValMap.ContainsKey(attribute)) return;
         var range = GamePlayManager.AttributeInitValMap[attribute];
 
-        AttributeData.values[(int)attribute] =  Mathf.Clamp(AttributeData.values[(int)attribute] + AddValue, range.MinVal,range.MaxVal ) ;
+        AttributeData.values[attribute] =  Mathf.Clamp(AttributeData.values[attribute] + AddValue, range.MinVal,range.MaxVal ) ;
     }
 
     public void DoOnBase()
@@ -46,6 +46,6 @@ public class AttributeAction
         if (!GamePlayManager.AttributeInitValMap.ContainsKey(attribute)) return;
         var range = GamePlayManager.AttributeInitValMap[attribute];
 
-        AttributeData.CurrentBaseValue[(int)attribute] = Mathf.Clamp(AttributeData.CurrentBaseValue[(int)attribute] + AddValue, range.MinVal, range.MaxVal);
+        AttributeData.CurrentBaseValue[attribute] = Mathf.Clamp(AttributeData.CurrentBaseValue[attribute] + AddValue, range.MinVal, range.MaxVal);
     }
 }
