@@ -65,7 +65,16 @@ public class Agent : MonoBehaviour
         currentState = State.mid;
     }
 
+    public void GoMid()
+    {
 
+        if (!GamePlayManager.isPlayerTurn) return;
+        UI.transform.localScale = Vector3.one;
+        currentState = State.mid;
+
+
+        GamePlayManager.isPlayerTurn = false;
+    }
     
 
     public  void GoBig()
@@ -74,9 +83,16 @@ public class Agent : MonoBehaviour
         {
             return;
         }
+        if(currentState == State.small)
+        {
+            GoMid();
+            return;
+        }
+        print("why hee");
+        UI.transform.localScale = Vector3.one * 1.3f;
         if (!GamePlayManager.isPlayerTurn) return;
         makeBig.DoOnBase();
-
+        currentState = State.big;
         GamePlayManager.isPlayerTurn = false;
 
 
@@ -89,9 +105,17 @@ public class Agent : MonoBehaviour
         {
             return;
         }
+
+        if (currentState == State.big)
+        {
+            GoMid();
+            return;
+        }
+
+        UI.transform.localScale = Vector3.one * .7f;
         if (!GamePlayManager.isPlayerTurn) return;
         makeSmall.DoOnBase();
-
+        currentState = State.small;
         GamePlayManager.isPlayerTurn = false;
 
 

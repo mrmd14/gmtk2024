@@ -29,15 +29,37 @@ public class ConditionSequence
    
 }
 
+
+
+[System.Serializable]
+public class AgentInSize
+{
+   public  Agent.Agents agent;
+    public  List< Agent.State> notInSize; 
+}
+
 [System.Serializable]
 public class Condition
 {
+
+    public List<AgentInSize> AgentInSize;
     public List< GameEvent> gameEvents;
 
     public List<ConditionItem> list;
 
     public bool IsMet()
     {
+
+
+        foreach(var item in AgentInSize)
+        {
+            Agent agent = null;
+            if(AgentManager.map.TryGetValue(item.agent,out agent))
+            {
+                if (item.notInSize.Contains(agent.currentState)) return false;
+            }
+        }
+
         foreach(var item in gameEvents)
         {
             if (!GamePlayManager.instance.triggered.ContainsKey(item))

@@ -121,14 +121,14 @@ public class GamePlayManager : MonoBehaviour
 
         foreach (var item in destList)
         {
-            
+         
            maxi  = Mathf.Max(maxi, item.SetScore());
+         
 
-          
         }
 
         randomList.Clear();
-   
+     
         foreach (var item in destList)
         {
             if (item.currentScore == -1000) continue;
