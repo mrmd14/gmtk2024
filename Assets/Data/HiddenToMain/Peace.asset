@@ -88,8 +88,6 @@ MonoBehaviour:
   - position: -1
     sequence:
       attributeActions:
-      - AddValue: 1
-        attribute: 5
       - AddValue: -1
         attribute: 3
   - position: 1

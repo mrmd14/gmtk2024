@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
+  m_Name: BearsWest
+  m_EditorClassIdentifier: 
+  eventText: "\rPolar bears emigrate to the west\r\n\r"
+  conditionSequence:
+    score: 0
+    list:
+    - gameEvents:
+      - {fileID: 11400000, guid: cc2bf5ca8b5570f43913f2a7b7de0189, type: 2}
+      list: []
+  ResultSequence:
+    attributeActions:
+    - AddValue: -1
+      attribute: 11
+    - AddValue: 1
+      attribute: 10
+    - AddValue: -1
+      attribute: 9
+  ReadFromForNext: []
+  currentScore: 0

@@ -4213,7 +4213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 658007730, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: makeBig.attributeActions.Array.data[1].AddValue
-      value: 2
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 658007730, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: makeBig.attributeActions.Array.data[2].AddValue

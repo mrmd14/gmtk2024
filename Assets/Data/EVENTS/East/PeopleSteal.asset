@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
+  m_Name: PeopleSteal
+  m_EditorClassIdentifier: 
+  eventText: "\rPeople are stealing others' sheep and eating them\r\n\r"
+  conditionSequence:
+    score: 0
+    list:
+    - gameEvents:
+      - {fileID: 11400000, guid: c9c1fca9e7d9e1b4397377fa7b8a6a3e, type: 2}
+      list:
+      - compare: 1
+        attribute: 4
+        value: -3
+      - compare: 1
+        attribute: 9
+        value: -7
+  ResultSequence:
+    attributeActions:
+    - AddValue: 2
+      attribute: 8
+    - AddValue: -4
+      attribute: 9
+    - AddValue: -1
+      attribute: 10
+  ReadFromForNext: []
+  currentScore: 0

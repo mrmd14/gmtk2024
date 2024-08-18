@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60257bd39f99ab543b8cd3f5ff87e075, type: 3}
   m_Name: GeneralGameData
   m_EditorClassIdentifier: 
-  DistanceFromMaxToConsiderForEvent: 3
+  DistanceFromMaxToConsiderForEvent: 0
   attributeInitVals:
   - attribute: 1
-    statsInitalVal: 3
+    statsInitalVal: 0
     MinVal: -10
     MaxVal: 10
   - attribute: 2
-    statsInitalVal: 3
+    statsInitalVal: 0
     MinVal: -10
     MaxVal: 10
   - attribute: 3
-    statsInitalVal: 2
+    statsInitalVal: 0
     MinVal: -10
     MaxVal: 10
   - attribute: 4
-    statsInitalVal: 1
+    statsInitalVal: 0
     MinVal: -8
     MaxVal: 8
   - attribute: 5
-    statsInitalVal: 1
+    statsInitalVal: 0
     MinVal: -8
     MaxVal: 8
   - attribute: 6
@@ -59,4 +59,9 @@ MonoBehaviour:
     MinVal: -1000
     MaxVal: 1000
   HidenToMainAttribute:
+  - {fileID: 11400000, guid: 81f51af22ea872647a124fea72933da9, type: 2}
+  - {fileID: 11400000, guid: 73e76c6778ccfc14aaf7a2bd3c2a3723, type: 2}
+  - {fileID: 11400000, guid: b71cbfa39769c874d9987723f5c5559a, type: 2}
+  - {fileID: 11400000, guid: 7c46918995f13764084de81206da6b93, type: 2}
+  - {fileID: 11400000, guid: dd6b1584546253941b797de7ef6e8b5d, type: 2}
   - {fileID: 11400000, guid: 322a2898598a6594da5cee6f7723d6dd, type: 2}

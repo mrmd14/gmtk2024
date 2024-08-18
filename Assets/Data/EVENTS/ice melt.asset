@@ -10,17 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: HEAT
+  m_Name: ice melt
   m_EditorClassIdentifier: 
-  eventText: MAKE HEAT
+  eventText: 'Antarctica ices start to melt
+
+
+'
   conditionSequence:
     score: 1
-    list: []
+    list:
+    - gameEvents: []
+      list:
+      - compare: 3
+        attribute: 6
+        value: 5
+      - compare: 1
+        attribute: 7
+        value: -5
   ResultSequence:
     attributeActions:
-    - AddValue: 5
-      attribute: 7
-    - AddValue: -5
+    - AddValue: -3
+      attribute: 9
+    - AddValue: -2
+      attribute: 10
+    - AddValue: -1
       attribute: 1
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: c75562521af44834f8c09d1dde220d35, type: 2}
+  - {fileID: 11400000, guid: d0b6dc7399fa46142924833d13a21765, type: 2}
   currentScore: 0

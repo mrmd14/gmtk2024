@@ -10,22 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: MELT
+  m_Name: WorshipSheep
   m_EditorClassIdentifier: 
-  eventText: MELT
+  eventText: "\rPeople are worshiping sheep!\n\r\n"
   conditionSequence:
-    score: 1
+    score: 0
     list:
-    - gameEvents:
-      - {fileID: 11400000, guid: cc2bf5ca8b5570f43913f2a7b7de0189, type: 2}
+    - gameEvents: []
       list:
       - compare: 3
-        attribute: 7
-        value: 5
+        attribute: 4
+        value: 7
       - compare: 1
-        attribute: 5
-        value: -5
+        attribute: 8
+        value: -6
   ResultSequence:
-    attributeActions: []
+    attributeActions:
+    - AddValue: -2
+      attribute: 10
   ReadFromForNext: []
-  currentScore: 1
+  currentScore: 0
