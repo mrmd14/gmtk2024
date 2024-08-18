@@ -13,8 +13,7 @@ public class RefrenceToAgent : MonoBehaviour
     public Stage stage;
 
 
-    public TextMeshPro text;
-
+  
 
 
     bool hovering = false;
@@ -42,7 +41,7 @@ public class RefrenceToAgent : MonoBehaviour
 
     private void OnEnable()
     {
-        text.text = gameObject.name;
+        
         hovering = false;
     }
 

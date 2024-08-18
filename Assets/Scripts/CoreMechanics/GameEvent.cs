@@ -13,6 +13,8 @@ public class GameEvent : ScriptableObject
 
     public  List<GameEvent>  ReadFromForNext;
 
+    public List<deBuff> deBuffs;
+
 
 
 

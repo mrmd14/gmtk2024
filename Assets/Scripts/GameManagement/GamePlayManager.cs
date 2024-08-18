@@ -40,6 +40,10 @@ public class GamePlayManager : MonoBehaviour
     public Dictionary<GameEvent,bool> triggered = new Dictionary<GameEvent, bool>();
 
 
+
+
+
+
     private void Awake()
     {
         instance = this;
@@ -50,6 +54,9 @@ public class GamePlayManager : MonoBehaviour
         triggered[gameEvent] = true;
         LastEventText.text =  gameEvent.eventText;
         gameEvent.ResultSequence.DoOnBase();
+
+        foreach(var item in gameEvent.deBuffs)
+        debuffManager.all.Add(item);
 
         isPlayerTurn = true;
     }
@@ -62,6 +69,10 @@ public class GamePlayManager : MonoBehaviour
 
     private void Init()
     {
+
+
+        debuffManager.Init();
+
         triggered.Clear();
 
         StageManager.instance.Init();
@@ -139,7 +150,7 @@ public class GamePlayManager : MonoBehaviour
                 randomList.Add(item);
             }
         }
-        print(randomList.Count);
+       
         if (randomList.Count == 0)
         {
             if(destList != runtTimeGameEvents)
@@ -213,6 +224,15 @@ public class GamePlayManager : MonoBehaviour
         stats.text = statText;
 
      
+
+    }
+
+
+    public static void EndPlayerTurn()
+    {
+        instance.SetValues();
+        debuffManager.RunDebuffs();
+        GamePlayManager.isPlayerTurn = false;
 
     }
 

@@ -73,9 +73,10 @@ public class Agent : MonoBehaviour
         currentState = State.mid;
 
 
-        GamePlayManager.isPlayerTurn = false;
+        GamePlayManager.EndPlayerTurn();
+
     }
-    
+
 
     public  void GoBig()
     {
@@ -93,7 +94,7 @@ public class Agent : MonoBehaviour
         if (!GamePlayManager.isPlayerTurn) return;
         makeBig.DoOnBase();
         currentState = State.big;
-        GamePlayManager.isPlayerTurn = false;
+        GamePlayManager.EndPlayerTurn();
 
 
 
@@ -116,7 +117,8 @@ public class Agent : MonoBehaviour
         if (!GamePlayManager.isPlayerTurn) return;
         makeSmall.DoOnBase();
         currentState = State.small;
-        GamePlayManager.isPlayerTurn = false;
+        GamePlayManager.EndPlayerTurn();
+
 
 
 
