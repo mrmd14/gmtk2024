@@ -16,7 +16,8 @@ public class HidenToMainAttribute  : ScriptableObject
         float currentValue = AttributeData.CurrentBaseValue[keyAttribute];
         foreach (var item in list)
         {
-            if ((currentValue > 0 && currentValue >= item.position) || (currentValue < 0 && currentValue <= item.position))
+            if ((currentValue > 0 && currentValue >= item.position && item.position>0  ) 
+                || (currentValue < 0 && currentValue <= item.position && item.position<0  ))
             {
                 item.sequence.Do();
             }

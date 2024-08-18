@@ -42,7 +42,7 @@ public class AttributeAction
 
     public void DoOnBase()
     {
-        Debug.Log(attribute);
+        
         if (!GamePlayManager.AttributeInitValMap.ContainsKey(attribute)) return;
         var range = GamePlayManager.AttributeInitValMap[attribute];
 

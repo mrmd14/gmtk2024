@@ -95,6 +95,7 @@ public class GamePlayManager : MonoBehaviour
         {
             foreach(var agentUI in item.refrenceToAgents)
             {
+               
                 agentUI.init();
             }
         }

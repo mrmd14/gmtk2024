@@ -27,8 +27,8 @@ public class RefrenceToAgent : MonoBehaviour
     private void Awake()
     {
         if (agent == null) return;
-        
 
+        agent.UI = this;
         
     }
 
@@ -82,6 +82,10 @@ public class RefrenceToAgent : MonoBehaviour
     {
         if (!hovering || agent == null) return;
 
+        if (stage != null && StageManager.instance.ScrollVal >= 1)
+        {
+            StageManager.instance.TurnOnStage(stage);
+        }
 
         if (!GamePlayManager.isPlayerTurn) return;
         if (Input.GetMouseButtonDown(1))
@@ -93,11 +97,7 @@ public class RefrenceToAgent : MonoBehaviour
             GoSmall();
         }
        
-        if (stage != null &&  StageManager.instance.ScrollVal >= 1)
-        {
-            StageManager.instance.TurnOnStage(stage);
-        }
-
+       
     }
 
 

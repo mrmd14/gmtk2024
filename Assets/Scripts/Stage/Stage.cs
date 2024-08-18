@@ -7,14 +7,16 @@ public class Stage : MonoBehaviour
     public Stage parentStage;
 
 
-  [HideInInspector] public  List<RefrenceToAgent> refrenceToAgents;
+  [HideInInspector] public  List<RefrenceToAgent> refrenceToAgents = new List<RefrenceToAgent>();
 
 
-    private void Start()
+    private void Awake()
     {
         for(int i =0;i< transform.childCount; ++i)
         {
-            refrenceToAgents.Add(transform.GetChild(i).GetComponent<RefrenceToAgent>());
+            var newAgent = transform.GetChild(i).GetComponent<RefrenceToAgent>();
+            if(newAgent != null)
+            refrenceToAgents.Add(newAgent);
         }
     }
 }
