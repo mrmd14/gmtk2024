@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventText: "\rPolar bears emigrate to the west\r\n\r"
   conditionSequence:
-    score: 0
+    score: 1
     list:
     - gameEvents:
       - {fileID: 11400000, guid: cc2bf5ca8b5570f43913f2a7b7de0189, type: 2}
@@ -22,10 +22,6 @@ MonoBehaviour:
   ResultSequence:
     attributeActions:
     - AddValue: -1
-      attribute: 11
-    - AddValue: 1
-      attribute: 10
-    - AddValue: -1
-      attribute: 9
+      attribute: 3
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: 1

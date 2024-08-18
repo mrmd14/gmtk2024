@@ -20,22 +20,18 @@ MonoBehaviour:
       - {fileID: 11400000, guid: cc2bf5ca8b5570f43913f2a7b7de0189, type: 2}
       list:
       - compare: 1
-        attribute: 2
-        value: -6
+        attribute: 9
+        value: -4
       - compare: 1
-        attribute: 3
-        value: -5
+        attribute: 7
+        value: -3
   ResultSequence:
     attributeActions:
-    - AddValue: -5
+    - AddValue: -3
       attribute: 1
-    - AddValue: -3
-      attribute: 10
-    - AddValue: -3
-      attribute: 9
-    - AddValue: -2
-      attribute: 11
-    - AddValue: -3
+    - AddValue: -1
+      attribute: 2
+    - AddValue: -1
       attribute: 3
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: -1000

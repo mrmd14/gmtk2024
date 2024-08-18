@@ -20,11 +20,11 @@ MonoBehaviour:
       list:
       - compare: 3
         attribute: 4
-        value: 7
+        value: 5
       - compare: 3
         attribute: 10
-        value: 2
+        value: 0
   ResultSequence:
     attributeActions: []
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: -1000

@@ -20,12 +20,12 @@ MonoBehaviour:
       list:
       - compare: 3
         attribute: 5
-        value: 6
+        value: 5
   ResultSequence:
     attributeActions:
-    - AddValue: 2
-      attribute: 8
     - AddValue: 1
-      attribute: 7
+      attribute: 3
+    - AddValue: 1
+      attribute: 2
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: -1000

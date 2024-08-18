@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventText: 'Polar Bears Become President
 
-    
+
 
 '
   conditionSequence:
@@ -25,12 +25,13 @@ MonoBehaviour:
       list:
       - compare: 1
         attribute: 3
-        value: -2
+        value: -1
+      - compare: 1
+        attribute: 8
+        value: -1
   ResultSequence:
     attributeActions:
     - AddValue: -1
-      attribute: 10
-    - AddValue: 1
-      attribute: 7
+      attribute: 3
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: -1000

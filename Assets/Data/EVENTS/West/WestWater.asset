@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: WestWater
   m_EditorClassIdentifier: 
-  eventText: '
-
-    West goes underwater
-
-    
+  eventText: 'West goes underwater
 
 '
   conditionSequence:
@@ -27,24 +23,24 @@ MonoBehaviour:
       list:
       - compare: 1
         attribute: 3
-        value: -6
+        value: -5
       - compare: 1
         attribute: 2
-        value: -6
+        value: -5
       - compare: 1
         attribute: 5
-        value: 9
+        value: 7
   ResultSequence:
     attributeActions:
-    - AddValue: -4
+    - AddValue: -2
       attribute: 1
-    - AddValue: -3
+    - AddValue: -1
       attribute: 10
-    - AddValue: -3
+    - AddValue: -1
       attribute: 9
     - AddValue: -1
       attribute: 2
     - AddValue: -1
       attribute: 3
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: -1000

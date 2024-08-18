@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60257bd39f99ab543b8cd3f5ff87e075, type: 3}
   m_Name: GeneralGameData
   m_EditorClassIdentifier: 
-  DistanceFromMaxToConsiderForEvent: 0
+  DistanceFromMaxToConsiderForEvent: 2
   attributeInitVals:
   - attribute: 1
     statsInitalVal: 0

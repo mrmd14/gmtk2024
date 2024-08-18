@@ -20,13 +20,13 @@ MonoBehaviour:
       list:
       - compare: 1
         attribute: 11
-        value: -6
+        value: -5
       - compare: 1
         attribute: 4
-        value: -5
+        value: -4
       - compare: 3
         attribute: 4
-        value: 4
+        value: 3
     - gameEvents:
       - {fileID: 11400000, guid: 4e5d34cc3a3db0f478383189fe66d9e4, type: 2}
       list:
@@ -35,11 +35,11 @@ MonoBehaviour:
         value: 4
   ResultSequence:
     attributeActions:
-    - AddValue: -4
-      attribute: 10
-    - AddValue: -2
+    - AddValue: 2
+      attribute: 1
+    - AddValue: -1
       attribute: 11
-    - AddValue: -2
-      attribute: 9
+    - AddValue: -1
+      attribute: 2
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: -1000

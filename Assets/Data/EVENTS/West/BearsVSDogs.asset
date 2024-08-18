@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventText: 'Polar bears and dogs are in war
 
-    
+
 
 '
   conditionSequence:
@@ -25,7 +25,7 @@ MonoBehaviour:
       list:
       - compare: 1
         attribute: 7
-        value: -4
+        value: -2
     - gameEvents:
       - {fileID: 11400000, guid: d0b6dc7399fa46142924833d13a21765, type: 2}
       list:
@@ -35,8 +35,8 @@ MonoBehaviour:
   ResultSequence:
     attributeActions:
     - AddValue: -2
-      attribute: 9
+      attribute: 2
     - AddValue: -1
-      attribute: 10
+      attribute: 1
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: -1000

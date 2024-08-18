@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventText: 'Polar bears control the lab
 
-    
+
 
 '
   conditionSequence:
@@ -25,12 +25,12 @@ MonoBehaviour:
       list:
       - compare: 1
         attribute: 5
-        value: -1
+        value: -2
   ResultSequence:
     attributeActions:
-    - AddValue: 1
-      attribute: 8
+    - AddValue: -2
+      attribute: 5
     - AddValue: -1
-      attribute: 6
+      attribute: 2
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: -1000

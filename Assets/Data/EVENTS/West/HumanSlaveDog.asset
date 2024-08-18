@@ -27,9 +27,9 @@ MonoBehaviour:
         value: -1
   ResultSequence:
     attributeActions:
-    - AddValue: -3
+    - AddValue: -2
       attribute: 10
-    - AddValue: -3
+    - AddValue: -2
       attribute: 9
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: -1000
