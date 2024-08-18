@@ -13,7 +13,7 @@ public class HidenToMainAttribute  : ScriptableObject
 
     public void Set()
     {
-        float currentValue = AttributeData.CurrentBaseValue[(int)keyAttribute];
+        float currentValue = AttributeData.CurrentBaseValue[keyAttribute];
         foreach (var item in list)
         {
             if ((currentValue > 0 && currentValue >= item.position) || (currentValue < 0 && currentValue <= item.position))

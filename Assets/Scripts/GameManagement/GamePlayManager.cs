@@ -77,7 +77,8 @@ public class GamePlayManager : MonoBehaviour
         }
         foreach(var item in AttributeInitValMap)
         {
-            AttributeData.values[(int)item.Key] = item.Value.statsInitalVal;
+            AttributeData.CurrentBaseValue[item.Key] = item.Value.statsInitalVal;
+            AttributeData.values[item.Key] = item.Value.statsInitalVal;
         }
 
 
@@ -206,7 +207,7 @@ public class GamePlayManager : MonoBehaviour
         string statText = "";
         foreach(var item in AttributeInitValMap)
         {
-            statText += $"  {item.Key} = {AttributeData.values[(int)item.Key]} ";
+            statText += $"  {item.Key} = {AttributeData.values[item.Key]} ";
         }
         stats.text = statText;
 
@@ -219,9 +220,9 @@ public class GamePlayManager : MonoBehaviour
 
     private void SetValues()
     {
-        for (int i = 0;i<AttributeData.CurrentBaseValue.Length;++i)
+        foreach(var item in AttributeData.CurrentBaseValue)
         {
-            AttributeData.values[i] = AttributeData.CurrentBaseValue[i];
+            AttributeData.values[item.Key] = item.Value;
         }
 
 

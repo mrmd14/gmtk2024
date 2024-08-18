@@ -74,7 +74,7 @@ public class ConditionItem
 
     public bool  IsMet()
     {
-        float keyVal = AttributeData.values[(int)attribute];
+        float keyVal = AttributeData.values[attribute];
         bool isMet = false;
 
         switch (compare)

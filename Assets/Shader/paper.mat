@@ -54,7 +54,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _colorDis: 10.93
-    - _colorMulti: 1.28
+    - _colorMulti: 1.1
     - _dis: 0.0009
     - _multUV: 1
     - _rngSpeed: 8.02
