@@ -23,14 +23,18 @@ public class AttributeData : MonoBehaviour
 }
 public enum Attributes
 {
-    EnvironmentalCondition=0,
-    Satisfaction=1,
-    Economy=2,
-    Health = 3,
-    Spirituality  = 4,
-    Science = 5,
-    intelegence = 6,
-    temperature = 7,
+    Population = 1,
+    Welfare = 2,
+    Happiness = 3,
+    Spirituality = 4,
+    Tech = 5,
+    //hidden ones
+    Temp = 6,
+    Env = 7,
+    Int = 8,
+    Security = 9,
+    Peace = 10,
+    Resources = 11,
 
 }
 
