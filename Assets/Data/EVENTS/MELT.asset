@@ -23,7 +23,7 @@ MonoBehaviour:
         attribute: 7
         value: 5
       - compare: 1
-        attribute: 0
+        attribute: 5
         value: -5
   ResultSequence:
     attributeActions: []

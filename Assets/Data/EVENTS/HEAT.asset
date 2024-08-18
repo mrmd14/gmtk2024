@@ -21,6 +21,6 @@ MonoBehaviour:
     - AddValue: 5
       attribute: 7
     - AddValue: -5
-      attribute: 0
+      attribute: 1
   ReadFromForNext: []
   currentScore: 0

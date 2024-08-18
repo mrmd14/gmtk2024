@@ -14,7 +14,7 @@ public class AttributeData : MonoBehaviour
     public static float[] CurrentBaseValue = new float[maxLen];
 
 
-    private const int maxLen = 8;
+    private const int maxLen = 11;
 
    
 
