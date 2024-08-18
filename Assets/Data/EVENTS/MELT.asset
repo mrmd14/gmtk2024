@@ -28,4 +28,4 @@ MonoBehaviour:
   ResultSequence:
     attributeActions: []
   ReadFromForNext: []
-  currentScore: 0
+  currentScore: 1

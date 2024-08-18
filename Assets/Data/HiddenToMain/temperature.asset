@@ -12,10 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446a7cf23b19e2c4eb352476d5755644, type: 3}
   m_Name: temperature
   m_EditorClassIdentifier: 
-  keyAttribute: 7
+  keyAttribute: 6
   list:
   - position: 1
     sequence:
       attributeActions:
       - AddValue: -1
+        attribute: 3
+  - position: 2
+    sequence:
+      attributeActions:
+      - AddValue: -1
+        attribute: 3
+      - AddValue: 1
         attribute: 2
+  - position: 3
+    sequence:
+      attributeActions:
+      - AddValue: 1
+        attribute: 11

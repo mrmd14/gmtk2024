@@ -14,25 +14,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DistanceFromMaxToConsiderForEvent: 3
   attributeInitVals:
-  - attribute: 0
-    statsInitalVal: 0
-    MinVal: -5
-    MaxVal: 5
-  - attribute: 2
-    statsInitalVal: 0
-    MinVal: -5
-    MaxVal: 5
   - attribute: 1
-    statsInitalVal: 0
-    MinVal: -5
-    MaxVal: 5
+    statsInitalVal: 3
+    MinVal: -10
+    MaxVal: 10
+  - attribute: 2
+    statsInitalVal: 3
+    MinVal: -10
+    MaxVal: 10
+  - attribute: 3
+    statsInitalVal: 2
+    MinVal: -10
+    MaxVal: 10
+  - attribute: 4
+    statsInitalVal: 1
+    MinVal: -8
+    MaxVal: 8
+  - attribute: 5
+    statsInitalVal: 1
+    MinVal: -8
+    MaxVal: 8
   - attribute: 6
     statsInitalVal: 0
-    MinVal: -5
-    MaxVal: 5
+    MinVal: -1000
+    MaxVal: 1000
   - attribute: 7
     statsInitalVal: 0
-    MinVal: -5
-    MaxVal: 5
+    MinVal: -1000
+    MaxVal: 1000
+  - attribute: 8
+    statsInitalVal: 0
+    MinVal: -1000
+    MaxVal: 1000
+  - attribute: 9
+    statsInitalVal: 0
+    MinVal: -1000
+    MaxVal: 1000
+  - attribute: 10
+    statsInitalVal: 0
+    MinVal: -1000
+    MaxVal: 1000
+  - attribute: 11
+    statsInitalVal: 0
+    MinVal: -1000
+    MaxVal: 1000
   HidenToMainAttribute:
   - {fileID: 11400000, guid: 322a2898598a6594da5cee6f7723d6dd, type: 2}
