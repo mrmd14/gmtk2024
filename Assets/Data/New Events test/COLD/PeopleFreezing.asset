@@ -9,10 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c83a698b580ecc4d99152c3eba37759, type: 3}
-  m_Name: GameEvents
+  m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
+  m_Name: PeopleFreezing
   m_EditorClassIdentifier: 
-  mainPool:
+  eventText: People Are Freezing to Death
+  conditionSequence:
+    score: 0
+    list: []
+  ResultSequence:
+    attributeActions: []
+  ReadFromForNext:
   - {fileID: 11400000, guid: 1c8c4bab786f3174098f7d37cd92c0f0, type: 2}
-  - {fileID: 11400000, guid: f89714a9b8b0d28469d962483c110465, type: 2}
   - {fileID: 11400000, guid: b8665fbbb31a71a4293f7fdf6b0d1fb6, type: 2}
+  deBuffs:
+  - debuf:
+      AddValue: 1
+      attribute: 3
+    MinValToResolve: -1
+  - debuf:
+      AddValue: 1
+      attribute: 2
+    MinValToResolve: -1
+  currentScore: 0

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: ice melt
+  m_Name: ice melt2
   m_EditorClassIdentifier: 
   eventText: 'Antarctica ices start to melt
 
@@ -18,16 +18,7 @@ MonoBehaviour:
 '
   conditionSequence:
     score: 2
-    list:
-    - AgentInSize: []
-      gameEvents: []
-      list:
-      - compare: 3
-        attribute: 6
-        value: 3
-      - compare: 1
-        attribute: 7
-        value: -3
+    list: []
   ResultSequence:
     attributeActions:
     - AddValue: -1
