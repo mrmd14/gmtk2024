@@ -66,7 +66,7 @@ public class RefrenceToAgent : MonoBehaviour
     private void GoBig()
     {
         if (agent.currentState == Agent.State.big) return;
-        transform.localScale = Vector3.one * 1.1f;
+        transform.localScale = Vector3.one * 1.3f;
         agent.GoBig();
     }
 
@@ -74,7 +74,7 @@ public class RefrenceToAgent : MonoBehaviour
     {
         if (agent.currentState == Agent.State.small) return;
 
-        transform.localScale = Vector3.one * .9f;
+    
         agent.GoSmall();
     }
 
