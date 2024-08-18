@@ -49,10 +49,7 @@ public class GamePlayManager : MonoBehaviour
     {
         triggered[gameEvent] = true;
         LastEventText.text =  gameEvent.eventText;
-        foreach(var item in gameEvent.ResultSequence.attributeActions)
-        {
-            item.Do();
-        }
+        gameEvent.ResultSequence.DoOnBase();
 
         isPlayerTurn = true;
     }
@@ -65,7 +62,7 @@ public class GamePlayManager : MonoBehaviour
 
     private void Init()
     {
-
+        triggered.Clear();
 
         StageManager.instance.Init();
 
@@ -110,6 +107,7 @@ public class GamePlayManager : MonoBehaviour
     {
 
 
+        if (last == null) return;
 
         // float Set Score and find max 
         float maxi = -1000;
@@ -128,7 +126,7 @@ public class GamePlayManager : MonoBehaviour
         }
 
         randomList.Clear();
-        print(maxi);
+   
         foreach (var item in destList)
         {
             if (item.currentScore == -1000) continue;
@@ -139,15 +137,17 @@ public class GamePlayManager : MonoBehaviour
                 randomList.Add(item);
             }
         }
-   
+        print(randomList.Count);
         if (randomList.Count == 0)
         {
             if(destList != runtTimeGameEvents)
             {
                 // force main 
                 RunScoredEvent(true);
-                return;
+            
             }
+
+            return;
         }
 
         last = randomList[Random.Range(0, randomList.Count)];
@@ -176,10 +176,20 @@ public class GamePlayManager : MonoBehaviour
     private void RunRandomEvent()
     {
 
-       
+
+        randomList.Clear();
+
+        foreach (var item in runtTimeGameEvents)
+        {
+            item.SetScore();
+            if (item.currentScore == -1000) continue;
+
+            randomList.Add(item);
+        }
+        if (randomList.Count == 0) return;
 
 
-       last = runtTimeGameEvents[Random.Range(0, runtTimeGameEvents.Count)];
+        last = randomList[Random.Range(0, randomList.Count)];
 
         runtTimeGameEvents.Remove(last);
         TriggerEvent(last);

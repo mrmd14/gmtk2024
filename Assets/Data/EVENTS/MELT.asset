@@ -10,18 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: SolarAttackTakeOver
+  m_Name: MELT
   m_EditorClassIdentifier: 
-  eventText: 'SolarAttack Take Over
-
-'
+  eventText: MELT
   conditionSequence:
+    score: 1
     list:
-    - score: 1
-      compare: 1
-      attribute: 0
-      value: 4
+    - gameEvents:
+      - {fileID: 11400000, guid: cc2bf5ca8b5570f43913f2a7b7de0189, type: 2}
+      list:
+      - compare: 3
+        attribute: 7
+        value: 5
+      - compare: 1
+        attribute: 0
+        value: -5
   ResultSequence:
     attributeActions: []
   ReadFromForNext: []
-  currentScore: 1
+  currentScore: 0

@@ -16,23 +16,23 @@ MonoBehaviour:
   attributeInitVals:
   - attribute: 0
     statsInitalVal: 0
-    MinVal: -2
-    MaxVal: 2
+    MinVal: -5
+    MaxVal: 5
   - attribute: 2
     statsInitalVal: 0
-    MinVal: -2
-    MaxVal: 2
+    MinVal: -5
+    MaxVal: 5
   - attribute: 1
     statsInitalVal: 0
-    MinVal: -2
-    MaxVal: 2
+    MinVal: -5
+    MaxVal: 5
   - attribute: 6
     statsInitalVal: 0
-    MinVal: -2
-    MaxVal: 2
+    MinVal: -5
+    MaxVal: 5
   - attribute: 7
     statsInitalVal: 0
-    MinVal: -2
-    MaxVal: 2
+    MinVal: -5
+    MaxVal: 5
   HidenToMainAttribute:
   - {fileID: 11400000, guid: 322a2898598a6594da5cee6f7723d6dd, type: 2}
