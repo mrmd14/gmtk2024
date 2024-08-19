@@ -8,5 +8,5 @@ public class deBuff
 {
     public AttributeAction debuf;
 
-    public float MinValToResolve = 2;
+   
 }

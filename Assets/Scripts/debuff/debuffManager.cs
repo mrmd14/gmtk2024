@@ -21,11 +21,7 @@ public class debuffManager : MonoBehaviour
 
             var item = all[i];
             float value = AttributeData.values[item.debuf.attribute];
-            if(value>= item.MinValToResolve)
-            {
-                all.Remove(item);
-                continue;
-            }
+           
             item.debuf.DoOnBase();
                 
         }

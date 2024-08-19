@@ -58,6 +58,9 @@ public class GamePlayManager : MonoBehaviour
         foreach(var item in gameEvent.deBuffs)
         debuffManager.all.Add(item);
 
+        foreach (var item in gameEvent.deBuffsToResolve)
+            debuffManager.all.Remove(item);
+
         isPlayerTurn = true;
     }
 
