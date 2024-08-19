@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: ice melt2
+  m_Name: BigRobotBrain
   m_EditorClassIdentifier: 
-  eventText: 'Antarctica ices start to melt
-
-
-'
+  eventText: Love is love! First robot and human marriage happened. The Easterns
+    are not cool with this and start protesting
   conditionSequence:
-    score: 2
-    list: []
+    score: 0
+    list:
+    - AgentInSize:
+      - agent: 23
+        notInSize: 0000000001000000
+      gameEvents: []
+      list: []
   ResultSequence:
-    attributeActions:
-    - AddValue: -1
-      attribute: 1
-  ReadFromForNext:
-  - {fileID: 11400000, guid: c75562521af44834f8c09d1dde220d35, type: 2}
-  - {fileID: 11400000, guid: d0b6dc7399fa46142924833d13a21765, type: 2}
+    attributeActions: []
+  ReadFromForNext: []
   deBuffs: []
-  currentScore: 2
+  currentScore: 0
