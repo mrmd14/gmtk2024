@@ -2023,7 +2023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442137, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442139, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: parentStage
@@ -3990,7 +3990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442137, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442139, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: parentStage
@@ -7829,7 +7829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442137, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442139, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: parentStage
@@ -9129,7 +9129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442137, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442139, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: parentStage
@@ -10838,7 +10838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442137, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442139, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: parentStage
@@ -12362,7 +12362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442137, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6218380636550442139, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: parentStage
@@ -15681,7 +15681,6 @@ MonoBehaviour:
   parentStage: {fileID: 1591086712}
   refrenceToAgents:
   - {fileID: 1996690642}
-  keepOn: 0
 --- !u!4 &6218380636900399394
 Transform:
   m_ObjectHideFlags: 0
@@ -15718,7 +15717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &8076376442793647974
 PrefabInstance:
   m_ObjectHideFlags: 0
