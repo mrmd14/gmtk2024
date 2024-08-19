@@ -10,16 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: AliensComing
+  m_Name: AlienConquer
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 
+  eventText: 'when aliens see humans are so small, they start attacking them and
+    conquering the earth. '
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 6
+        notInSize: 0100000002000000
+      gameEvents: []
+      list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: 8898a1cf0814f9241927a026c414623b, type: 2}
   deBuffs: []
   deBuffsToResolve: []
+  RemoveAgent: 
   currentScore: 0
