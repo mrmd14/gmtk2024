@@ -62,6 +62,13 @@ public class GamePlayManager : MonoBehaviour
         foreach (var item in gameEvent.deBuffsToResolve)
             debuffManager.all.Remove(item);
 
+
+        foreach(var item in gameEvent.RemoveAgent)
+        {
+            print(item);
+            AgentManager.TurnOff(item);
+        }
+
         isPlayerTurn = true;
     }
 

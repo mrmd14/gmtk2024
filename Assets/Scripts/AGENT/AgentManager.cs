@@ -19,6 +19,23 @@ public class AgentManager : MonoBehaviour
 
     public static Dictionary<Agent.Agents, Agent> map = new Dictionary<Agent.Agents, Agent>();
 
+
+
+
+    public static void TurnOff(Agent.Agents agentKey )
+    {
+        Agent agent = null;
+        if (!map.TryGetValue(agentKey, out agent)) return;
+        print(agent.UI);
+        if (agent.UI == null) return; 
+        foreach (var item in agent.UI.links)
+        {
+            item.gameObject.SetActive(false);
+
+        }
+        agent.UI.gameObject.SetActive(false);
+    }
+
     private void Awake()
     {
         foreach(var item in list)
