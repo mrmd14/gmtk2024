@@ -22,6 +22,10 @@ public class GameEvent : ScriptableObject
 
 
 
+    public List<Agent.Agents> RemoveAgent;
+
+
+
 
     public string MakeStr()
     {
