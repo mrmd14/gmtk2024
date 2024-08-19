@@ -15,6 +15,8 @@ public class GameEvent : ScriptableObject
 
     public List<deBuff> deBuffs;
 
+    public List<deBuff> deBuffsToResolve;
+
 
 
 
