@@ -28,8 +28,11 @@ public class RefrenceToAgent : MonoBehaviour
     [HideInInspector] Color targetColor= Color.cyan;
 
     public Color NotHoverColor = Color.gray;
+    public Color HoverColor = Color.gray;
 
-    
+
+
+    public GameObject shadow;
 
     
 
@@ -117,7 +120,7 @@ public class RefrenceToAgent : MonoBehaviour
 
     private void SetForSprite(SpriteRenderer sp, bool val)
     {
-        sp.material.SetColor("_OutlineColor", NotHoverColor);
+        sp.material.SetColor("_OutlineColor", val ? HoverColor: NotHoverColor  );
         sp.material.SetFloat("_OutlineThickness", (val ? hoverScale : NoHoverScale));
     }
 
@@ -139,7 +142,10 @@ public class RefrenceToAgent : MonoBehaviour
 
         bool anyHovering = anyHover();
 
-
+        if(shadow != null)
+        {
+            shadow.gameObject.SetActive(anyHovering);
+        }
 
         SetForSprite(spriteRenderer, anyHovering);
 
