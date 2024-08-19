@@ -176,11 +176,11 @@ public class GamePlayManager : MonoBehaviour
             }
         }
        
-        if (randomList.Count == 0)
+        if (randomList.Count == 0 )
         {
 
 
-            
+            if (runBackUp) return false;
 
             return RunScoredEvent(false, true);
         }
