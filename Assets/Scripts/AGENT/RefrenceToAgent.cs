@@ -85,7 +85,7 @@ public class RefrenceToAgent : MonoBehaviour
 
         if (stage != null && StageManager.instance.ScrollVal >= 1)
         {
-            StageManager.instance.TurnOnStage(stage);
+            StageManager.instance.TurnOnStage(stage, transform);
         }
 
         if (!GamePlayManager.isPlayerTurn) return;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class StageManager : MonoBehaviour
@@ -19,7 +20,7 @@ public class StageManager : MonoBehaviour
 
     public void Init()
     {
-        TurnOnStage(Stages[0]);
+        TurnOnStage(Stages[0],null,true);
     }
 
 
@@ -28,15 +29,32 @@ public class StageManager : MonoBehaviour
         instance = this;
     }
 
-    public void TurnOnStage(Stage stage) {
+    public void TurnOnStage(Stage stage, Transform targetFollow, bool Force = false ) {
 
         if (stage == null) return;
+        StartCoroutine(
+                ZoomAndWait(stage, Force, targetFollow));
+    }
+
+
+    IEnumerator ZoomAndWait(Stage stage,bool force , Transform targetFollow) {
+        if (!force)
+        {
+            CamZoom.InitZoom(targetFollow);
+            while (CamZoom.zooming) yield return null;
+        }
+        CamZoom.ReZoomAndRecenter();
         current = stage;
-        foreach(var item in Stages)
+        foreach (var item in Stages)
         {
             item.gameObject.SetActive(false);
         }
         stage.gameObject.SetActive(true);
+
+        Camera.main.orthographicSize = 5;
+        CamZoom.ZoomTarget = 5;
+
+
     }
 
 
@@ -52,12 +70,24 @@ public class StageManager : MonoBehaviour
         }
         ScrollVal += Input.mouseScrollDelta.y;
 
-        if (current == null || current.parentStage == null) return;
 
-      
+
+        if (current == null || current.parentStage == null)
+        {
+
+            if (ScrollVal <= -1)
+            {
+                CamZoom.target = 5.5f;
+            }
+
+            return;
+
+        }
+
+
         if (ScrollVal <= -1)
         {
-            TurnOnStage(current.parentStage);
+            TurnOnStage(current.parentStage, null, true);
         }
 
     

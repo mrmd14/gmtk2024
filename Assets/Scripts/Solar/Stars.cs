@@ -1,37 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Stars : MonoBehaviour
 {
 
     public List<SpriteRenderer> stars;
+    List<float> starsParalaxCo = new List<float>();
 
     public  Vector2 RangeSize = new Vector2(.3f, 1f);
 
-    public List<Vector2> lastPos = new List<Vector2>(100);
+    public List<Vector2> lastPos = new List<Vector2>();
 
-
-    Vector2 lastCamPos = Vector2.zero;
+    Vector2 MousePos=> Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    Vector2 lastMousePos = Vector2.zero;
 
     private void OnEnable()
     {
         SetPos();
+      
+
+     
     }
 
     private void SetPos()
     {
 
 
-        
+        while (starsParalaxCo.Count < 100)
+        {
+
+            starsParalaxCo.Add(Random.Range(0f, .15f));
+        }
+
         for (int i = 0; i < stars.Count; i++)
         {
            
             if(i< lastPos.Count && i<stars.Count)
             lastPos[i] = stars[i].transform.position;
+
         }
-        lastCamPos = Camera.main.transform.position;
+        lastMousePos = MousePos;
     }
 
 
@@ -47,16 +60,18 @@ public class Stars : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var delta = (Vector2)Camera.main.transform.position - lastCamPos;
-        lastCamPos = (Vector2)Camera.main.transform.position;
+        var delta = MousePos - lastMousePos;
+        delta = delta.normalized;
+        lastMousePos = MousePos;
         if (delta.magnitude > 1)
         {
             SetPos();
             return;
         }
+        int i = 0;
         foreach(var item in stars)
         {
-            item.transform.position +=  item.transform.localScale.x * delta.x * .1f * Vector3.right ;
+            item.transform.position +=  (Vector3)delta * starsParalaxCo[i++] * Time.fixedDeltaTime;
         }
     }
 }

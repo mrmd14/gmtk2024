@@ -14,7 +14,7 @@ public class SolarMove : MonoBehaviour
 
     float rad = 0;
 
-    public static float AllSpeedCo = .01f;
+    public static float AllSpeedCo = .001f;
 
 
     private void Awake()
