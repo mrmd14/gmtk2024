@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GameEvent : ScriptableObject
 {
+
+    [TextArea] public string ResolveText = "";
+
     [TextArea] public  string eventText = "";
 
     public ConditionSequence conditionSequence;

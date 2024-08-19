@@ -37,7 +37,7 @@ public class CamZoom : MonoBehaviour
     
     public static void InitZoom(Transform follow )
     {
-        CamZoom.ZoomTarget = 3;
+        CamZoom.ZoomTarget = 2.1f;
         targetFollow = follow;
         if (follow == null) return;
         CurrentSpeedCo = follow.position.magnitude ;

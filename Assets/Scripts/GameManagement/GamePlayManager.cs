@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.WSA;
@@ -49,10 +50,10 @@ public class GamePlayManager : MonoBehaviour
         instance = this;
     }
 
-    public void TriggerEvent(GameEvent gameEvent)
+    public void TriggerEvent(GameEvent gameEvent, bool skiped )
     {
         triggered[gameEvent] = true;
-        LastEventText.text =  gameEvent.eventText;
+        LastEventText.text = (skiped? "" :  gameEvent.ResolveText)+   gameEvent.eventText;
         gameEvent.ResultSequence.DoOnBase();
 
         foreach(var item in gameEvent.deBuffs)
@@ -119,19 +120,19 @@ public class GamePlayManager : MonoBehaviour
 
     }
 
-    private void RunScoredEvent(bool forceMain )
+    private bool  RunScoredEvent(bool skiped   )
     {
 
 
-        if (last == null) return;
+        if (last == null) return false;
 
-
+       
         isPlayerTurn = true;
 
         // float Set Score and find max 
         float maxi = -1000;
-        var destList = last.ReadFromForNext.Count == 0 ? runtTimeGameEvents : last.ReadFromForNext;
-        if (forceMain) destList = runtTimeGameEvents;
+        var destList =  last.ReadFromForNext;
+       
 
 
 
@@ -159,28 +160,37 @@ public class GamePlayManager : MonoBehaviour
        
         if (randomList.Count == 0)
         {
-            if(destList != runtTimeGameEvents)
-            {
-                
-            
-            }
+         
 
-            return;
+            return false;
         }
 
+
+        var lastLast = last;
+
         last = randomList[Random.Range(0, randomList.Count)];
+
+
+        
 
         if(destList == runtTimeGameEvents)
         runtTimeGameEvents.Remove(last);
 
 
         
+        
+        // can skip 
+        if(RunScoredEvent(true))
+        {
 
-        print($"{last.eventText} {last.currentScore}");
+            triggered[lastLast] = true ;
+            return true;
+        }
+        TriggerEvent(last, skiped);
 
-        TriggerEvent(last);
+        return true;
 
-        isPlayerTurn = true;
+      
     }
 
 
@@ -210,7 +220,7 @@ public class GamePlayManager : MonoBehaviour
         last = randomList[Random.Range(0, randomList.Count)];
 
         runtTimeGameEvents.Remove(last);
-        TriggerEvent(last);
+        TriggerEvent(last, false);
     }
 
 

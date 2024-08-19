@@ -77,7 +77,7 @@ public class StageManager : MonoBehaviour
 
             if (ScrollVal <= -1)
             {
-                CamZoom.target = 5.5f;
+                CamZoom.target = 10f;
             }
 
             return;
