@@ -47,9 +47,20 @@ public class Condition
 
     public List<ConditionItem> list;
 
+    public List<GameEvent> ExcludeEvents;
+
     public bool IsMet()
     {
 
+
+
+
+        foreach(var item in ExcludeEvents)
+        {
+            if (GamePlayManager.instance.triggered.ContainsKey(item))
+                return false;
+            
+        }
 
         foreach(var item in AgentInSize)
         {

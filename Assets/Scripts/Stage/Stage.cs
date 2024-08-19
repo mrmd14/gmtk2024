@@ -9,8 +9,8 @@ public class Stage : MonoBehaviour
 
   [HideInInspector] public  List<RefrenceToAgent> refrenceToAgents = new List<RefrenceToAgent>();
 
-   public  bool keepOn = false;
-    private void Awake()
+ 
+    public  void init()
     {
         for(int i =0;i< transform.childCount; i++)
         {
@@ -21,6 +21,6 @@ public class Stage : MonoBehaviour
             refrenceToAgents.Add(newAgent);
         }
 
-        gameObject.SetActive(keepOn);
+       
     }
 }

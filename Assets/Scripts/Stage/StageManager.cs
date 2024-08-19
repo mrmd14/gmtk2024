@@ -27,6 +27,11 @@ public class StageManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        foreach(var item in Stages)
+        {
+            item.init();
+        }
     }
 
     public void TurnOnStage(Stage stage, Transform targetFollow, bool Force = false ) {

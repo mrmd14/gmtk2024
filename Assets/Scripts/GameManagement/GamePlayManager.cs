@@ -9,10 +9,12 @@ public class GamePlayManager : MonoBehaviour
 {
 
     public GameEvents gameEvents;
+    public GameEvents backUpEvent;
 
     public static bool isPlayerTurn = false;
 
     private List<GameEvent> runtTimeGameEvents = new List<GameEvent>();
+    private List<GameEvent> runtTimeBackUp = new List<GameEvent>();
 
 
 
@@ -105,15 +107,24 @@ public class GamePlayManager : MonoBehaviour
 
 
         runtTimeGameEvents.Clear();
+        runtTimeBackUp.Clear();
+
+
+
         foreach (var item in gameEvents.mainPool)
         {
             runtTimeGameEvents.Add(item);
         }
 
+        foreach (var item in backUpEvent.mainPool)
+        {
+            runtTimeBackUp.Add(item);
+        }
+
 
         // init agent UI 
 
-        foreach(var item in stages)
+        foreach (var item in stages)
         {
             foreach(var agentUI in item.refrenceToAgents)
             {
@@ -127,7 +138,7 @@ public class GamePlayManager : MonoBehaviour
 
     }
 
-    private bool  RunScoredEvent(bool skiped   )
+    private bool  RunScoredEvent(bool skiped , bool runBackUp   )
     {
 
 
@@ -138,7 +149,7 @@ public class GamePlayManager : MonoBehaviour
 
         // float Set Score and find max 
         float maxi = -1000;
-        var destList =  last.ReadFromForNext;
+        var destList = runBackUp? runtTimeBackUp  :last.ReadFromForNext ;
        
 
 
@@ -167,9 +178,11 @@ public class GamePlayManager : MonoBehaviour
        
         if (randomList.Count == 0)
         {
-         
 
-            return false;
+
+            
+
+            return RunScoredEvent(false, true);
         }
 
 
@@ -182,12 +195,13 @@ public class GamePlayManager : MonoBehaviour
 
         if(destList == runtTimeGameEvents)
         runtTimeGameEvents.Remove(last);
+        runtTimeBackUp.Remove(last);
 
 
         
         
         // can skip 
-        if(RunScoredEvent(true))
+        if(RunScoredEvent(true, false))
         {
 
             triggered[lastLast] = true ;
@@ -204,7 +218,7 @@ public class GamePlayManager : MonoBehaviour
 
     public void DoEnv()
     {
-        RunScoredEvent(false);
+        RunScoredEvent(false, false);
     }
 
 
