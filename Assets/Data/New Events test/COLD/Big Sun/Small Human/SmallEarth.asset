@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: PeopleFreezing
+  m_Name: SmallEarth
   m_EditorClassIdentifier: 
-  eventText: People Are Freezing to Death
+  eventText: The gravity is reduced so people can float and traverse more easily.
+    But sometimes when dogs jump to catch a ball, they won't come back down!
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 1
+        notInSize: 0100000002000000
+      gameEvents: []
+      list: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext:
-  - {fileID: 11400000, guid: 1c8c4bab786f3174098f7d37cd92c0f0, type: 2}
-  - {fileID: 11400000, guid: b8665fbbb31a71a4293f7fdf6b0d1fb6, type: 2}
+  ReadFromForNext: []
   deBuffs: []
   currentScore: 0

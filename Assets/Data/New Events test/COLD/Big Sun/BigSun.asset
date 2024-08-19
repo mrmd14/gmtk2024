@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: BigSun
   m_EditorClassIdentifier: 
-  eventText: people are hot(uummm yeessss)
+  eventText: The weather cools down for a bit. But then Ices melt and East goes underwater!
+    People go to the East and there is a population problem
   conditionSequence:
     score: 0
     list:
@@ -24,6 +25,7 @@ MonoBehaviour:
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: cc2bf5ca8b5570f43913f2a7b7de0189, type: 2}
+  - {fileID: 11400000, guid: f11be0dfeef21f04591e8cbf7809c96e, type: 2}
+  - {fileID: 11400000, guid: e24b2cd63bdf6d443a7fa265ade7fcfd, type: 2}
   deBuffs: []
-  currentScore: 0
+  currentScore: -1000
