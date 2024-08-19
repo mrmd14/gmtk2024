@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RefrenceToAgent : MonoBehaviour
 {
@@ -19,15 +21,34 @@ public class RefrenceToAgent : MonoBehaviour
     bool hovering = false;
 
     Vector2 orgianalScale = Vector2.one;
-   
+
+
+
+
+    [HideInInspector] Color targetColor= Color.cyan;
+
+    public Color NotHoverColor = Color.gray;
 
     
+
+    
+
+
+      float  hoverScale = 3.59f;
+     float NoHoverScale = 2.06f;
+
+
+
+    public List<RefrenceToAgentLink> links;
+
+
+
 
     private void Awake()
     {
         if (agent == null) return;
 
-
+        
         text.text = agent.name;
         agent.UI = this;
         
@@ -37,7 +58,7 @@ public class RefrenceToAgent : MonoBehaviour
     public void init()
     {
         hovering = false;
-        transform.localScale = Vector3.one;
+        SetScale (Vector3.one);
         
     }
 
@@ -64,10 +85,24 @@ public class RefrenceToAgent : MonoBehaviour
 
     }
 
+
+    public void SetScale(Vector3 newVal)
+    {
+        transform.localScale = newVal;
+
+        foreach(var item in links)
+        {
+            item.transform.localScale = newVal;
+        }
+    }
+
     private void GoBig()
     {
         if (agent.currentState == Agent.State.big) return;
-        transform.localScale = Vector3.one * 1.3f;
+        SetScale( Vector3.one * 1.3f);
+        
+
+
         agent.GoBig();
     }
 
@@ -79,9 +114,43 @@ public class RefrenceToAgent : MonoBehaviour
         agent.GoSmall();
     }
 
+
+    private void SetForSprite(SpriteRenderer sp, bool val)
+    {
+        sp.material.SetColor("_OutlineColor", NotHoverColor);
+        sp.material.SetFloat("_OutlineThickness", (val ? hoverScale : NoHoverScale));
+    }
+
+
+    private bool anyHover()
+    {
+       var res =  hovering;
+
+        foreach (var item in links)
+        {
+            if (item.hovering) res = true;
+        }
+        return res;
+
+    }
     private void Update()
     {
-        if (!hovering || agent == null) return;
+
+
+        bool anyHovering = anyHover();
+
+
+
+        SetForSprite(spriteRenderer, anyHovering);
+
+
+
+        foreach (var item in links)
+        {
+            SetForSprite(item.vfx, anyHovering);
+        }
+
+        if (!anyHovering || agent == null) return;
 
         if (stage != null && StageManager.instance.ScrollVal >= 1)
         {
@@ -97,8 +166,11 @@ public class RefrenceToAgent : MonoBehaviour
         {
             GoSmall();
         }
-       
-       
+
+     
+
+
+
     }
 
 

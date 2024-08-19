@@ -32,6 +32,8 @@ public class StageManager : MonoBehaviour
     public void TurnOnStage(Stage stage, Transform targetFollow, bool Force = false ) {
 
         if (stage == null) return;
+
+
         StartCoroutine(
                 ZoomAndWait(stage, Force, targetFollow));
     }

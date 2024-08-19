@@ -65,11 +65,24 @@ public class Agent : MonoBehaviour
         currentState = State.mid;
     }
 
+    public void PostEffect(State newState)
+    {
+        if(newState != currentState)
+        {
+            LensDistEffect.instance.Do(UI.transform.position);
+        }
+    }
+
     public void GoMid()
     {
 
         if (!GamePlayManager.isPlayerTurn) return;
-        UI.transform.localScale = Vector3.one;
+
+        PostEffect(State.mid);
+
+
+
+        UI.SetScale(Vector3.one);
         currentState = State.mid;
 
 
@@ -89,8 +102,9 @@ public class Agent : MonoBehaviour
             GoMid();
             return;
         }
-        print("why hee");
-        UI.transform.localScale = Vector3.one * 1.3f;
+        PostEffect(State.big);
+
+        UI.SetScale( Vector3.one * 1.3f);
         if (!GamePlayManager.isPlayerTurn) return;
         makeBig.DoOnBase();
         currentState = State.big;
@@ -112,8 +126,8 @@ public class Agent : MonoBehaviour
             GoMid();
             return;
         }
-
-        UI.transform.localScale = Vector3.one * .7f;
+        PostEffect(State.small);
+        UI.SetScale(Vector3.one * .7f);
         if (!GamePlayManager.isPlayerTurn) return;
         makeSmall.DoOnBase();
         currentState = State.small;

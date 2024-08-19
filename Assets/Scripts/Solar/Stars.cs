@@ -16,7 +16,7 @@ public class Stars : MonoBehaviour
 
     public List<Vector2> lastPos = new List<Vector2>();
 
-    Vector2 MousePos=> Camera.main.ScreenToWorldPoint(Input.mousePosition);
+   public static Vector2 MousePos=> Camera.main.ScreenToWorldPoint(Input.mousePosition);
     Vector2 lastMousePos = Vector2.zero;
 
     private void OnEnable()
@@ -34,7 +34,7 @@ public class Stars : MonoBehaviour
         while (starsParalaxCo.Count < 100)
         {
 
-            starsParalaxCo.Add(Random.Range(0f, .15f));
+            starsParalaxCo.Add(Random.Range(0f, .35f));
         }
 
         for (int i = 0; i < stars.Count; i++)
