@@ -10,19 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: PeopleFreezing
+  m_Name: SmallWest
   m_EditorClassIdentifier: 
-  ResolveText: 
-  eventText: 'It is too cold and people are freezing. Go make the sun bigger.
-
-'
+  ResolveText: 'The city is now smaller and people have to walk less. (You think
+    it doesn''t make sense but hey, you reduced the size of the sun so let it go)
+    but '
+  eventText: there is less food and resources! People have to live on a budget from
+    now on
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 3
+        notInSize: 0100000002000000
+      gameEvents: []
+      list: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext:
-  - {fileID: 11400000, guid: 1c8c4bab786f3174098f7d37cd92c0f0, type: 2}
+  ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
   currentScore: 0

@@ -10,19 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: PeopleFreezing
+  m_Name: BigSunEast
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'It is too cold and people are freezing. Go make the sun bigger.
-
-'
+  eventText: The weather cools down for a bit. But then Ices melt and West goes underwater!
+    People go to the East and there is a population problem
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 0
+        notInSize: 0100000000000000
+      gameEvents: []
+      list: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: 1c8c4bab786f3174098f7d37cd92c0f0, type: 2}
+  - {fileID: 11400000, guid: f11be0dfeef21f04591e8cbf7809c96e, type: 2}
+  - {fileID: 11400000, guid: e24b2cd63bdf6d443a7fa265ade7fcfd, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  currentScore: 0
+  currentScore: -1000

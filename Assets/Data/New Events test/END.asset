@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: PeopleFreezing
+  m_Name: END
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'It is too cold and people are freezing. Go make the sun bigger.
+  eventText: 'THE END
 
 '
   conditionSequence:
@@ -21,8 +21,7 @@ MonoBehaviour:
     list: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext:
-  - {fileID: 11400000, guid: 1c8c4bab786f3174098f7d37cd92c0f0, type: 2}
+  ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
   currentScore: 0

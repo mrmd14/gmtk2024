@@ -10,19 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: PeopleFreezing
+  m_Name: BigHumanHeart
   m_EditorClassIdentifier: 
-  ResolveText: 
-  eventText: 'It is too cold and people are freezing. Go make the sun bigger.
-
-'
+  ResolveText: "People suddenly went soft and could tolerate each other. \n"
+  eventText: "Although they look strangely to robots now\u2026\r"
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 14
+        notInSize: 0000000001000000
+      gameEvents: []
+      list: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: 1c8c4bab786f3174098f7d37cd92c0f0, type: 2}
+  - {fileID: 11400000, guid: 4f28685c0d3b8bb478e27c39f94ef251, type: 2}
+  - {fileID: 11400000, guid: 8bedac71a62fa9845a3a0ec9db6d3837, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   currentScore: 0
