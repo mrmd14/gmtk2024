@@ -122,6 +122,9 @@ public class GamePlayManager : MonoBehaviour
 
         if (last == null) return;
 
+
+        isPlayerTurn = true;
+
         // float Set Score and find max 
         float maxi = -1000;
         var destList = last.ReadFromForNext.Count == 0 ? runtTimeGameEvents : last.ReadFromForNext;
@@ -155,8 +158,7 @@ public class GamePlayManager : MonoBehaviour
         {
             if(destList != runtTimeGameEvents)
             {
-                // force main 
-                RunScoredEvent(true);
+                
             
             }
 
