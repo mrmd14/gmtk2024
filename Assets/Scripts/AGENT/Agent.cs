@@ -85,7 +85,7 @@ public class Agent : MonoBehaviour
         PostEffect(State.mid);
 
 
-
+        if(UI!= null)
         UI.SetScale(Vector3.one);
         currentState = State.mid;
 
@@ -143,7 +143,8 @@ public class Agent : MonoBehaviour
         }
         if (linkedAgent != null && val) linkedAgent.GoSmall(false);
         PostEffect(State.small);
-        UI.SetScale(Vector3.one * .7f);
+        if (UI != null)
+            UI.SetScale(Vector3.one * .7f);
         if (!GamePlayManager.isPlayerTurn) return;
         makeSmall.DoOnBase();
         currentState = State.small;

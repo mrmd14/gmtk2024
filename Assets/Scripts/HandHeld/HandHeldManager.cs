@@ -81,7 +81,7 @@ public class HandHeldManager : MonoBehaviour
 
     public static Stage ManageEastWest(Stage stage)
     {
-        print($"{stage} {TurnOnIfTurnOff.isWestActive}");
+      
         if (stage == instance.west && !TurnOnIfTurnOff.isWestActive)
         {
             return  instance.east;

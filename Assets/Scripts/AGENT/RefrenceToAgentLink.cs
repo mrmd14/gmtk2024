@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RefrenceToAgentLink : MonoBehaviour
 {
 
     public bool hovering;
-
+    Collider2D box;
     public SpriteRenderer vfx;
     private void OnEnable()
     {
-
+        box = GetComponent<Collider2D>();
         hovering = false;
     }
 
@@ -29,5 +30,15 @@ public class RefrenceToAgentLink : MonoBehaviour
     {
         hovering = false;
 
+    }
+
+    private void Update()
+    {
+        if (box != null)
+        {
+            hovering = box.OverlapPoint(Stars.MousePos);
+
+
+        }
     }
 }

@@ -106,7 +106,7 @@ public class StageManager : MonoBehaviour
         }
 
 
-        if (ScrollVal <= -1)
+        if (ScrollVal <= -1 && GamePlayManager.CanScale)
         {
             TurnOnStage(current.parentStage, null, true);
         }

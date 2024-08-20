@@ -46,7 +46,14 @@ public class RefrenceToAgent : MonoBehaviour
 
 
 
+    public List<BoxCollider2D> checkBefore;
+
+
     public Sprite icon;
+
+    Collider2D box;
+
+    public Transform setParent;
 
     private void Awake()
     {
@@ -60,7 +67,19 @@ public class RefrenceToAgent : MonoBehaviour
         
         text.text = agent.name;
         agent.UI = this;
+
+        box = GetComponent<Collider2D>();
+
+       
         
+    }
+
+    private void Start()
+    {
+        if (setParent != null)
+        {
+            transform.parent = setParent;
+        }
     }
 
 
@@ -85,7 +104,7 @@ public class RefrenceToAgent : MonoBehaviour
 
         SetCursor.SetCurserZoom();
 
-        hovering = true;
+      
 
         StageManager.instance.ScrollVal = 0;
 
@@ -97,7 +116,6 @@ public class RefrenceToAgent : MonoBehaviour
     {
         SetCursor.SetCurserNormal();
 
-        hovering = false;
 
     }
 
@@ -160,6 +178,26 @@ public class RefrenceToAgent : MonoBehaviour
     {
 
 
+
+        var mousePos = Stars.MousePos;
+        foreach(var item in checkBefore)
+        {
+            if (item.OverlapPoint(mousePos))
+            {
+
+                hovering = false;
+                break;
+
+            }
+        }
+
+        if(box != null)
+        {
+            hovering = box.OverlapPoint(mousePos);
+
+            
+        }
+
         bool anyHovering = anyHover();
 
         if(shadow != null)
@@ -185,6 +223,18 @@ public class RefrenceToAgent : MonoBehaviour
 
         if (!GamePlayManager.isPlayerTurn) return;
         if (!GamePlayManager.CanScale) return;
+        foreach (var item in checkBefore)
+        {
+            if (item.OverlapPoint(mousePos))
+            {
+
+                print(item.gameObject);
+                hovering = false;
+                break;
+
+            }
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             GoBig();
