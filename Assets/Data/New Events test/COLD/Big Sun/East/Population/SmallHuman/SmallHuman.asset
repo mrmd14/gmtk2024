@@ -16,7 +16,13 @@ MonoBehaviour:
   eventText: 'Although it''s hard for them to traverse '
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 6
+        notInSize: 0100000002000000
+      gameEvents: []
+      list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
@@ -25,4 +31,6 @@ MonoBehaviour:
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 0
   currentScore: 0
