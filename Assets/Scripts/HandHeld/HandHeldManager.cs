@@ -56,7 +56,9 @@ public class HandHeldManager : MonoBehaviour
                     instance.handhelds[k].gameObject.SetActive(true);
                     managed.Add(agentKey.agent);
                     Stage stage = null;
-                    if (!AgentManager.parentStage.TryGetValue(agent, out stage))
+                    if (agentKey.agent == Agent.Agents.HUMAN && !TurnOnIfTurnOff.isWestActive) stage = instance.east;
+                    else if (agentKey.agent == Agent.Agents.HUMAN && !TurnOnIfTurnOff.isEastActive) stage = instance.west;
+                    else  if (!AgentManager.parentStage.TryGetValue(agent, out stage))
                     {
 
                         instance.handhelds[k].btn.action = null;
@@ -64,11 +66,11 @@ public class HandHeldManager : MonoBehaviour
                         continue;
                     }
 
-                    if(stage == instance.west && !stage.gameObject.activeSelf)
+                    if(stage == instance.west && !TurnOnIfTurnOff.isWestActive)
                     {
                         stage = instance.east;
                     }
-                    if (stage == instance.east && !stage.gameObject.activeSelf)
+                    if (stage == instance.east && !TurnOnIfTurnOff.isEastActive)
                     {
                         stage = instance.west;
                     }

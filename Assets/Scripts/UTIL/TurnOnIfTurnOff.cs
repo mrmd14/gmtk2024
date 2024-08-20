@@ -24,7 +24,7 @@ public class TurnOnIfTurnOff : MonoBehaviour
         isWestActive = true;
         foreach (var item in turnOnn)
         {
-            print(item);
+          
             item.gameObject.SetActive(false);
         }
     }
