@@ -25,7 +25,9 @@ MonoBehaviour:
       - {fileID: 11400000, guid: 9deb88be7d34f7c4a9950358e347f582, type: 2}
       list: []
       ExcludeEvents: []
-    - AgentInSize: []
+    - AgentInSize:
+      - agent: 1
+        notInSize: 
       gameEvents:
       - {fileID: 11400000, guid: 9b328f56df14bfe479cff0fd47776d23, type: 2}
       list: []
@@ -43,4 +45,5 @@ MonoBehaviour:
   RemoveAgent: 
   EndGame: 0
   MiniEnd: 0
+  ForceFeedBack: 0
   currentScore: 0
