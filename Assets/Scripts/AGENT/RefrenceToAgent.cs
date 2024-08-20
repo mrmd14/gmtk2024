@@ -67,7 +67,7 @@ public class RefrenceToAgent : MonoBehaviour
     public void init()
     {
         
-        agent.UI = this;
+     
         hovering = false;
         SetScale (Vector3.one);
         
@@ -75,7 +75,7 @@ public class RefrenceToAgent : MonoBehaviour
 
     private void OnEnable()
     {
-        
+        agent.UI = this;
         hovering = false;
     }
 

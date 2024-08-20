@@ -61,6 +61,8 @@ public class GamePlayManager : MonoBehaviour
 
    static bool forceFeedBack = false;
 
+    public List<TurnOnIfTurnOff> switchs;
+
     private void Awake()
     {
         playBtn.action = Init;
@@ -112,6 +114,11 @@ public class GamePlayManager : MonoBehaviour
 
     public  void Init()
     {
+
+
+        foreach(var item in switchs){
+            item.Init();
+        }
 
         forceFeedBack = false;
         playBtn.transform.parent.gameObject.SetActive(false);
@@ -219,7 +226,7 @@ public class GamePlayManager : MonoBehaviour
         {
 
 
-            if (runBackUp &&   last.ReadFromForNext.Count ==0 ) return false;
+            if (runBackUp ||   last.ReadFromForNext.Count != 0 ) return false;
 
             return RunScoredEvent(false, true);
         }
