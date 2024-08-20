@@ -27,6 +27,16 @@ MonoBehaviour:
       - {fileID: 11400000, guid: 5f3c684b13f331f4f9277a4f10bba4e1, type: 2}
       list: []
       ExcludeEvents: []
+    - AgentInSize: []
+      gameEvents:
+      - {fileID: 11400000, guid: bbf783fd7066ff847a421ec3a356d9de, type: 2}
+      list: []
+      ExcludeEvents: []
+    - AgentInSize: []
+      gameEvents:
+      - {fileID: 11400000, guid: 4efe8ad7a7b21434db4a5f39cf26e6eb, type: 2}
+      list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext: []
