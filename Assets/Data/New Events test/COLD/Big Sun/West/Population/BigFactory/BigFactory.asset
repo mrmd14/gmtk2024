@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResolveText: 
   eventText: "People start to sleep in the factory. Hence they spend more time working
-    and advancing the sciencey stuff. This could be interesting. \r\n"
+    and advancing the sciencey stuff. Scientists came up with a way to communicate
+    with aliens! They sent them a message inviting them to the earth and they are
+    here. \n"
   conditionSequence:
     score: 0
     list:
@@ -27,11 +29,16 @@ MonoBehaviour:
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: cc6db782200409648902cbe836b13ea4, type: 2}
-  - {fileID: 11400000, guid: 6d1d8dcc53914ba419cb0ed9c6442edc, type: 2}
+  - {fileID: 11400000, guid: 05663aa3c5272ca489e00b9d32bf1e6e, type: 2}
+  - {fileID: 11400000, guid: bd8208830daadb84ab5adac103aac948, type: 2}
+  - {fileID: 11400000, guid: 0d062acb13c40e047b820935fe16763f, type: 2}
+  - {fileID: 11400000, guid: 45f42f9fac305fb48be8b306da759147, type: 2}
+  - {fileID: 11400000, guid: 53402b4cedac0f04a915424792db4b13, type: 2}
+  - {fileID: 11400000, guid: 4f0d94c98ed6c5b48b38bf4080010797, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
   EndGame: 0
   MiniEnd: 0
-  currentScore: -1000
+  ForceFeedBack: 0
+  currentScore: 0
