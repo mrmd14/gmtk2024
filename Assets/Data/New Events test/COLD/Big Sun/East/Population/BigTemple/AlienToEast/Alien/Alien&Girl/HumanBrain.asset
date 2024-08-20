@@ -22,13 +22,17 @@ MonoBehaviour:
         notInSize: 0100000002000000
       gameEvents: []
       list: []
-      ExcludeEvents: []
+      ExcludeEvents:
+      - {fileID: 11400000, guid: 0f246cd3524f7904898bf2974b3b0b71, type: 2}
+      - {fileID: 11400000, guid: 884188426f3ff514fbde365ee24e3af4, type: 2}
     - AgentInSize:
       - agent: 14
         notInSize: 0100000002000000
       gameEvents: []
       list: []
-      ExcludeEvents: []
+      ExcludeEvents:
+      - {fileID: 11400000, guid: 0f246cd3524f7904898bf2974b3b0b71, type: 2}
+      - {fileID: 11400000, guid: 884188426f3ff514fbde365ee24e3af4, type: 2}
   ResultSequence:
     attributeActions: []
   ReadFromForNext: []

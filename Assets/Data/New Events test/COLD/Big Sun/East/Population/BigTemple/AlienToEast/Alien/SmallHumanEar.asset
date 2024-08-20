@@ -25,7 +25,7 @@ MonoBehaviour:
   ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 
+  RemoveAgent: 18000000
   EndGame: 0
   MiniEnd: 1
   currentScore: 0

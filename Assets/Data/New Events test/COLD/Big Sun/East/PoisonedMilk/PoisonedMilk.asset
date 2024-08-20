@@ -10,25 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: TaxFraud
+  m_Name: PoisonedMilk
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: aliens are controlling the temple now. For a while everything is going
-    well but suddenly people realize the temple is doing tax fraud! And they are
-    angry about it!
+  eventText: it seems that people are poisoned! It probably is something related
+    to the milk they eat.
   conditionSequence:
     score: 0
     list:
     - AgentInSize: []
       gameEvents:
-      - {fileID: 11400000, guid: ffe07d7062538734ab1ff249562aa0d6, type: 2}
+      - {fileID: 11400000, guid: 876118e348b19c64b99d6b2e1309e3dc, type: 2}
+      list: []
+      ExcludeEvents: []
+    - AgentInSize: []
+      gameEvents:
+      - {fileID: 11400000, guid: 9119947e5d93abf4c9cca5b3f2cd7275, type: 2}
       list: []
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: 3e0c2beec6aef8248a6f04aa0f9e31e0, type: 2}
-  - {fileID: 11400000, guid: 884188426f3ff514fbde365ee24e3af4, type: 2}
+  - {fileID: 11400000, guid: 3e8d828064c39c045a58f9dbf5b5f9bf, type: 2}
+  - {fileID: 11400000, guid: d16b231c2b442554f91da8ac636a2dda, type: 2}
+  - {fileID: 11400000, guid: 57cd9ee64c06add4e82b0dc96b973785, type: 2}
+  - {fileID: 11400000, guid: 48e302059ab7b56419f66e5c747e51bf, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 

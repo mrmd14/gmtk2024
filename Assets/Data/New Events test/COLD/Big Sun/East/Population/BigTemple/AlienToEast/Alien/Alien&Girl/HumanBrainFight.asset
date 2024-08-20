@@ -16,16 +16,17 @@ MonoBehaviour:
   eventText: 'People cant accept this and kill the alien!
 
     aliens and humans
-    get in to a war! Aliens kill humans with their super duper guns and revenge their
-    mate.'
+    get into a war! Aliens kill humans with their superduper guns and get revenge
+    on their mate.
+
+'
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
       - agent: 13
         notInSize: 0100000002000000
-      gameEvents:
-      - {fileID: 11400000, guid: 0f246cd3524f7904898bf2974b3b0b71, type: 2}
+      gameEvents: []
       list: []
       ExcludeEvents: []
     - AgentInSize:

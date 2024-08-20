@@ -10,31 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: AlienNotComing
+  m_Name: BigHumanEyeFixed
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'spirituality is rising through the roof! Monks claim that they communicated
-    with angels through their callings and that they are coming to earth!
-
-    altough
-    it seems they didnt saw earth and missed it!'
+  eventText: people now clearly see that milk is bad for them and stop drinking it!
+    but they are hungry now
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 1
-        notInSize: 0100000002000000
-      gameEvents:
-      - {fileID: 11400000, guid: d3cb34b43c6c1944cb706018bb4fdce2, type: 2}
+      - agent: 13
+        notInSize: 00000000
+      - agent: 15
+        notInSize: 0100000000000000
+      gameEvents: []
       list: []
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: 05663aa3c5272ca489e00b9d32bf1e6e, type: 2}
+  - {fileID: 11400000, guid: 91790c64fff9a0f489ed96579e3eb3dd, type: 2}
+  - {fileID: 11400000, guid: 2492d4cd7d1f37a4aa74aff6b51a50e7, type: 2}
+  - {fileID: 11400000, guid: 7254030c3962bc4488ed0aa275046848, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 18000000
+  RemoveAgent: 
   EndGame: 0
-  MiniEnd: 1
+  MiniEnd: 0
   currentScore: 0
