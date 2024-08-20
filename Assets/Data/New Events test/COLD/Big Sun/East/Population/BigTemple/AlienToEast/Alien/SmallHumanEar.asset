@@ -18,7 +18,13 @@ MonoBehaviour:
     leave a bad review but thankfully no one heard them!
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 16
+        notInSize: 0100000002000000
+      gameEvents: []
+      list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext: []
