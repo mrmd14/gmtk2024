@@ -26,8 +26,12 @@ MonoBehaviour:
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: b5daa9fd6e5641043b4c41d5901df068, type: 2}
+  - {fileID: 11400000, guid: aef60d51cb586ec49bfbeb384513506f, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 0
   currentScore: 0

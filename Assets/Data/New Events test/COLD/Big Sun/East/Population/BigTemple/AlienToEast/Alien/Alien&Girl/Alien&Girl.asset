@@ -27,10 +27,13 @@ MonoBehaviour:
       - {fileID: 11400000, guid: 0f246cd3524f7904898bf2974b3b0b71, type: 2}
   ResultSequence:
     attributeActions: []
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: dbfee0bbbd59df64a9e445777930de60, type: 2}
+  - {fileID: 11400000, guid: faca835beaea6b24e82229575f7b17aa, type: 2}
+  - {fileID: 11400000, guid: 23335b9046dccab48a4f5f75a95ad25a, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
   EndGame: 0
   MiniEnd: 0
-  currentScore: 0
+  currentScore: -1000

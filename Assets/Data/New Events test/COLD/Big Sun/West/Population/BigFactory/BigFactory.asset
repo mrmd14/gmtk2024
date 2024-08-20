@@ -23,9 +23,15 @@ MonoBehaviour:
         notInSize: 0100000000000000
       gameEvents: []
       list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: cc6db782200409648902cbe836b13ea4, type: 2}
+  - {fileID: 11400000, guid: 6d1d8dcc53914ba419cb0ed9c6442edc, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  currentScore: 0
+  RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 0
+  currentScore: -1000
