@@ -25,6 +25,8 @@ public class StageManager : MonoBehaviour
             foreach(var agent in item.refrenceToAgents)
             {
                 agent.agent.Init();
+
+                AgentManager.parentStage[agent.agent] = item;
             }
         }
 

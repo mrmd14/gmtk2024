@@ -18,6 +18,7 @@ public class AgentManager : MonoBehaviour
 
 
     public static Dictionary<Agent.Agents, Agent> map = new Dictionary<Agent.Agents, Agent>();
+    public static Dictionary<Agent, Stage> parentStage = new Dictionary<Agent, Stage>();
 
 
 
@@ -26,7 +27,7 @@ public class AgentManager : MonoBehaviour
     {
         Agent agent = null;
         if (!map.TryGetValue(agentKey, out agent)) return;
-        print(agent.UI);
+       
         if (agent.UI == null) return; 
         foreach (var item in agent.UI.links)
         {

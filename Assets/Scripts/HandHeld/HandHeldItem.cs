@@ -7,4 +7,6 @@ public class HandHeldItem : MonoBehaviour
 {
     public TextMeshPro title;
     public SpriteRenderer vfx;
+
+    public AddBtnToBox btn;
 }
