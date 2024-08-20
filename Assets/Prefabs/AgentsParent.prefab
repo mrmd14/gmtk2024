@@ -453,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: WEST
+      value: West
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -935,7 +935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: TREE
+      value: Tree
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -1263,7 +1263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: HEART
+      value: Heart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -1595,7 +1595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: HUMAN
+      value: Man
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -1765,7 +1765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: ROBOT
+      value: Robot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -1939,7 +1939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: HUMAN
+      value: Man
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -2255,7 +2255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: LAB
+      value: Lab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -2745,7 +2745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: DOG
+      value: Dog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -2911,7 +2911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: BRAIN
+      value: Brain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -3057,7 +3057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: eye
+      value: Eye
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -3397,7 +3397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: livestock
+      value: Sheep
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -3721,7 +3721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: EAST
+      value: East
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -3887,7 +3887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: emotionCircuit
+      value: E.P.U
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -4025,7 +4025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: ear
+      value: Ear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -4183,7 +4183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: cpu
+      value: C.P.U
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
@@ -4357,7 +4357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1333656297022237713, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
       propertyPath: m_Name
-      value: SUN
+      value: Sun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0e4d8c606ea324a8eee317b5244aae, type: 3}
