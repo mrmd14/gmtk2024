@@ -10,13 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: SmallHuman
+  m_Name: BigTemple
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 
+  eventText: 'People sleep in the temple now. They begin to dig into religion and
+    spirituality really hard! I wonder where this would lead. '
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 12
+        notInSize: 0000000001000000
+      gameEvents: []
+      list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext: []

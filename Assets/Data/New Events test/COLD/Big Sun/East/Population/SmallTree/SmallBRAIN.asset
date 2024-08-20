@@ -10,32 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: East
+  m_Name: SmallBRAIN
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: When the West goes underwater, People go to the East and there is a
-    population problem
+  eventText: People need less oxygen to function. They are retarded and mimicking
+    sheep now, but hey! A win is a win.
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 4
-        notInSize: 0000000001000000
-      gameEvents: []
-      list: []
-      ExcludeEvents: []
-    - AgentInSize:
-      - agent: 3
+      - agent: 13
         notInSize: 0100000002000000
       gameEvents: []
       list: []
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext:
-  - {fileID: 11400000, guid: 939dac170cd3210439566b3354002c8c, type: 2}
-  - {fileID: 11400000, guid: 32fe538f82ab43748b9b8ffd734d99d0, type: 2}
+  ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 03000000
-  currentScore: -1000
+  RemoveAgent: 
+  currentScore: 0

@@ -10,32 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: East
+  m_Name: BigRobot
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: When the West goes underwater, People go to the East and there is a
-    population problem
+  eventText: We don't need taboo love! Robots are scary and dangerous and people
+    won't get any ideas. But now the tension got higher and robots started war against
+    humans! Sadly humans lost to big robots and mankind is no more.
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 4
+      - agent: 8
         notInSize: 0000000001000000
-      gameEvents: []
-      list: []
-      ExcludeEvents: []
-    - AgentInSize:
-      - agent: 3
-        notInSize: 0100000002000000
       gameEvents: []
       list: []
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: 939dac170cd3210439566b3354002c8c, type: 2}
-  - {fileID: 11400000, guid: 32fe538f82ab43748b9b8ffd734d99d0, type: 2}
+  - {fileID: 11400000, guid: 8898a1cf0814f9241927a026c414623b, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 03000000
-  currentScore: -1000
+  RemoveAgent: 
+  currentScore: 0
