@@ -55,8 +55,8 @@ public class GamePlayManager : MonoBehaviour
 
 
 
-    public static bool CanZoom => inGamePlay && !Cinematic.anyCinematic;
-    public static bool CanScale => inGamePlay && !Cinematic.anyCinematic;
+    public static bool CanZoom => inGamePlay && !Cinematic.anyCinematic ;
+    public static bool CanScale => inGamePlay && !Cinematic.anyCinematic&& !TypewriterText.isTyping;
 
 
     private void Awake()

@@ -37,6 +37,7 @@ public class Agent : MonoBehaviour
         wool=21,
         cpu=22,
         emotionCircuit=23,
+        Alien = 24,
 
     }
 
