@@ -72,6 +72,13 @@ public class GamePlayManager : MonoBehaviour
         {
             END.End();
         }
+
+        else
+        {
+            HandHeldManager.Set(gameEvent);
+        }
+
+
         triggered[gameEvent] = true;
         LastEventText.fullText = (skiped? "" :  gameEvent.ResolveText)+   gameEvent.eventText;
         LastEventText.Init();

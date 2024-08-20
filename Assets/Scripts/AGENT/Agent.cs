@@ -61,6 +61,7 @@ public class Agent : MonoBehaviour
 
 
 
+
     public void Init()
     {
         currentState = State.mid;

@@ -46,11 +46,17 @@ public class RefrenceToAgent : MonoBehaviour
 
 
 
+    public Sprite icon;
 
     private void Awake()
     {
         if (agent == null) return;
 
+
+        if(icon == null)
+        {
+            icon = spriteRenderer.sprite;
+        }
         
         text.text = agent.name;
         agent.UI = this;
