@@ -102,7 +102,7 @@ public class GamePlayManager : MonoBehaviour
 
         foreach(var item in gameEvent.RemoveAgent)
         {
-            print(item);
+           
             AgentManager.SetVal(item, false);
         }
 

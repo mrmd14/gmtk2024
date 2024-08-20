@@ -69,8 +69,8 @@ public class Condition
            
             if (AgentManager.map.TryGetValue(item.agent,out agent))
             {
-               
 
+               
                 if (item.notInSize.Contains(agent.currentState)) return false;
             }
         }

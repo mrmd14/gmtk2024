@@ -79,9 +79,9 @@ public class Agent : MonoBehaviour
 
     public void GoMid(bool val)
     {
-
+       
         if (!GamePlayManager.isPlayerTurn) return;
-
+        if (linkedAgent != null && val) linkedAgent.GoMid(false);
         PostEffect(State.mid);
 
 
@@ -93,13 +93,15 @@ public class Agent : MonoBehaviour
         GamePlayManager.EndPlayerTurn();
 
 
-        if (linkedAgent != null && val) linkedAgent.GoMid(false);
+    
 
     }
 
 
     public  void GoBig(bool val)
     {
+
+       
         if(currentState == State.big)
         {
             return;
@@ -109,16 +111,19 @@ public class Agent : MonoBehaviour
             GoMid(val);
             return;
         }
+
+        if (linkedAgent != null && val) linkedAgent.GoBig(false);
+
         PostEffect(State.big);
 
-       
+       if(UI != null)
         UI.SetScale( Vector3.one * 1.3f);
         if (!GamePlayManager.isPlayerTurn) return;
         makeBig.DoOnBase();
         currentState = State.big;
         GamePlayManager.EndPlayerTurn();
 
-        if (linkedAgent != null && val) linkedAgent.GoBig(false);
+       
 
 
 
@@ -136,6 +141,7 @@ public class Agent : MonoBehaviour
             GoMid(val);
             return;
         }
+        if (linkedAgent != null && val) linkedAgent.GoSmall(false);
         PostEffect(State.small);
         UI.SetScale(Vector3.one * .7f);
         if (!GamePlayManager.isPlayerTurn) return;
@@ -149,6 +155,12 @@ public class Agent : MonoBehaviour
 
 
 
+    }
+
+
+    private void Update()
+    {
+        print($"{gameObject} {currentState}");
     }
 
 
