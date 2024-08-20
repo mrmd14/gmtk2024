@@ -10,20 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: BigRobotBrain
+  m_Name: EastORWest
   m_EditorClassIdentifier: 
-  eventText: Love is love! First robot and human marriage happened. The Easterns
-    are not cool with this and start protesting
+  ResolveText: 
+  eventText: The weather cools down for a bit. But then Ices melt and now the two
+    continents are going underwater!
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 23
-        notInSize: 0000000001000000
+      - agent: 0
+        notInSize: 0100000000000000
       gameEvents: []
       list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: 1c8c4bab786f3174098f7d37cd92c0f0, type: 2}
+  - {fileID: 11400000, guid: 0cbaf7f81affa1848a24e225ad53465a, type: 2}
   deBuffs: []
+  deBuffsToResolve: []
+  RemoveAgent: 
   currentScore: 0
