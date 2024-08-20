@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: SmallHuman
   m_EditorClassIdentifier: 
-  ResolveText: 'People can finally sleep in their place! '
-  eventText: 'Although it''s hard for them to traverse '
+  ResolveText: 
+  eventText: 'People can finally sleep in their place! Although it''s hard for them
+    to traverse '
   conditionSequence:
     score: 0
     list:
@@ -33,4 +34,5 @@ MonoBehaviour:
   RemoveAgent: 
   EndGame: 0
   MiniEnd: 0
+  ForceFeedBack: 0
   currentScore: 0

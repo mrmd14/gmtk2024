@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: BigRoboBrain
   m_EditorClassIdentifier: 
-  ResolveText: 'robots are really smart now and people can see no difference between
-    them and humans, so this makes people calm. But '
-  eventText: robots see humans as a lower species now. They think of themselves as
-    thuman's overlords and take them as slaves.
+  ResolveText: 
+  eventText: robots are really smart now and people can see no difference between
+    them and humans, so this makes people calm. But robots see humans as a lower
+    species now. They think of themselves as thuman's overlords and take them as
+    slaves.
   conditionSequence:
     score: 0
     list:
@@ -27,11 +28,11 @@ MonoBehaviour:
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext:
-  - {fileID: 11400000, guid: 8898a1cf0814f9241927a026c414623b, type: 2}
+  ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
   EndGame: 1
   MiniEnd: 0
+  ForceFeedBack: 0
   currentScore: 0

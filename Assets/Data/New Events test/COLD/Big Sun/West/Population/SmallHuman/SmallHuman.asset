@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: SmallHuman
   m_EditorClassIdentifier: 
-  ResolveText: "People can finally sleep in their place! Although \n"
-  eventText: "it's hard for them to traverse \r"
+  ResolveText: 
+  eventText: "People can finally sleep in their place! Although it's hard for them
+    to traverse \r"
   conditionSequence:
     score: 0
     list:
@@ -22,6 +23,7 @@ MonoBehaviour:
         notInSize: 0100000002000000
       gameEvents: []
       list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
@@ -29,4 +31,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 10e275ec38ace244cba5b62174498707, type: 2}
   deBuffs: []
   deBuffsToResolve: []
+  RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 0
+  ForceFeedBack: 0
   currentScore: 0

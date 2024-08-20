@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: SmallEarth
   m_EditorClassIdentifier: 
-  ResolveText: The gravity is reduced so people can float and traverse more easily.
-    But
-  eventText: " sometimes when trees' leaves and fruits fall, well\u2026 they won't
-    fall!\r\n"
+  ResolveText: 
+  eventText: "The gravity is reduced so people can float and traverse more easily.
+    But sometimes when trees' leaves and fruits fall, well\u2026 they won't fall!\r\n"
   conditionSequence:
     score: 0
     list:
@@ -31,4 +30,7 @@ MonoBehaviour:
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 1
+  ForceFeedBack: 1
   currentScore: 0
