@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: SmallHumanEar
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: "Aliens are here and it seems like they wanna welcome their stay.\r
-    aliens try to communicate with humans, but humans can't hear them! After trying
-    for so long they get bored and leave the earth. They said they were gonna leave
-    a bad review but thankfully no one heard them!"
+  eventText: aliens try to communicate with humans, but humans can't hear them! After
+    trying for so long they get bored and leave the earth. They said they were gonna
+    leave a bad review but thankfully no one heard them!
   conditionSequence:
     score: 0
     list: []
