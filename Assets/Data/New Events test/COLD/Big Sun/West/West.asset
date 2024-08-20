@@ -39,5 +39,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00522cdfb0edbf84a8edfcf987ac523f, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 
+  RemoveAgent: 04000000
   currentScore: 0

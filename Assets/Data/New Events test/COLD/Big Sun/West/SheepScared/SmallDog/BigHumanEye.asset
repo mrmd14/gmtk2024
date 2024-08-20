@@ -10,23 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: East
+  m_Name: BigHumanEye
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: When the West goes underwater, People go to the East and there is a
-    population problem
+  eventText: 'People now can see very well so they can protect their stuff. It''s
+    uncomfortable though cause now they can see lots of things if you know what I
+    mean! LOTS OF things '
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 4
+      - agent: 15
         notInSize: 0000000001000000
-      gameEvents: []
-      list: []
-      ExcludeEvents: []
-    - AgentInSize:
-      - agent: 3
-        notInSize: 0100000002000000
       gameEvents: []
       list: []
       ExcludeEvents: []
@@ -35,5 +30,5 @@ MonoBehaviour:
   ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 03000000
-  currentScore: -1000
+  RemoveAgent: 
+  currentScore: 0

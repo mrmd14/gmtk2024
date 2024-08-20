@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c83a698b580ecc4d99152c3eba37759, type: 3}
   m_Name: backUp
   m_EditorClassIdentifier: 
-  mainPool: []
+  mainPool:
+  - {fileID: 11400000, guid: 6d1d8dcc53914ba419cb0ed9c6442edc, type: 2}
+  - {fileID: 11400000, guid: 35ab61b10fa599b45a5e55cf006cc1b6, type: 2}
+  - {fileID: 11400000, guid: 7af1a4321a1cd0f4ab81f4ee9123f413, type: 2}

@@ -10,30 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: East
+  m_Name: SheepScared
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: When the West goes underwater, People go to the East and there is a
-    population problem
+  eventText: 'Sheep are scared of dogs and Their milk has gone dry!
+
+'
   conditionSequence:
     score: 0
     list:
-    - AgentInSize:
-      - agent: 4
-        notInSize: 0000000001000000
-      gameEvents: []
-      list: []
-      ExcludeEvents: []
-    - AgentInSize:
-      - agent: 3
-        notInSize: 0100000002000000
-      gameEvents: []
+    - AgentInSize: []
+      gameEvents:
+      - {fileID: 11400000, guid: 1c8c4bab786f3174098f7d37cd92c0f0, type: 2}
       list: []
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: c1c354d52c931154e8917062db403338, type: 2}
+  - {fileID: 11400000, guid: d248d50cebe81f74c8c8b08a483f84cf, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 03000000
-  currentScore: -1000
+  RemoveAgent: 
+  currentScore: 0

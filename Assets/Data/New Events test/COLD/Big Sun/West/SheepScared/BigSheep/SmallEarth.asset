@@ -10,22 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: East
+  m_Name: SmallEarth
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: When the West goes underwater, People go to the East and there is a
-    population problem
+  eventText: Gravity is low and wools go to space now. But sometimes when dogs jump
+    to catch a ball, they won't come back down. 2 bird, 1 stone.
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 4
-        notInSize: 0000000001000000
-      gameEvents: []
-      list: []
-      ExcludeEvents: []
-    - AgentInSize:
-      - agent: 3
+      - agent: 1
         notInSize: 0100000002000000
       gameEvents: []
       list: []
@@ -35,5 +29,5 @@ MonoBehaviour:
   ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 03000000
-  currentScore: -1000
+  RemoveAgent: 
+  currentScore: 0

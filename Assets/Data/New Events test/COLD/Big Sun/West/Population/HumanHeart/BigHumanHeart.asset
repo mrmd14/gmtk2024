@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BigHumanHeart
   m_EditorClassIdentifier: 
   ResolveText: "People suddenly went soft and could tolerate each other. \n"
-  eventText: "Although they look strangely to robots now\u2026\r"
+  eventText: "Although they look strangely at robots now\u2026\r"
   conditionSequence:
     score: 0
     list:
@@ -22,6 +22,7 @@ MonoBehaviour:
         notInSize: 0000000001000000
       gameEvents: []
       list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
@@ -29,4 +30,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8bedac71a62fa9845a3a0ec9db6d3837, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  currentScore: 0
+  RemoveAgent: 
+  currentScore: -1000
