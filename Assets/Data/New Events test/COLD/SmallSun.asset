@@ -10,26 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: BigSunWest
+  m_Name: SmallSun
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: The weather cools down for a bit. But then Ices melt and East goes underwater!
-    People go to the West and there is a population problem
+  eventText: Good job! now its worse and everybody is dead!
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
       - agent: 0
-        notInSize: 0100000000000000
+        notInSize: 0100000002000000
       gameEvents: []
       list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext:
-  - {fileID: 11400000, guid: a89b76cafe31c274b81ecde45f95fcb3, type: 2}
-  - {fileID: 11400000, guid: 9deb88be7d34f7c4a9950358e347f582, type: 2}
-  - {fileID: 11400000, guid: b0760101aae2e9a49a00482982c23479, type: 2}
-  - {fileID: 11400000, guid: 00522cdfb0edbf84a8edfcf987ac523f, type: 2}
+  ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
-  currentScore: -1000
+  RemoveAgent: 
+  currentScore: 0

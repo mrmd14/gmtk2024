@@ -10,24 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: BigSunEast
+  m_Name: SmallDog
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: The weather cools down for a bit. But then Ices melt and West goes underwater!
-    People go to the East and there is a population problem
+  eventText: 'Dogs are so small now that sheep don''t feel threatened. But since
+    they are not capable of anything now, the crime rate is up the roof! People are
+    scared and can''t protect themselves.
+
+'
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 0
-        notInSize: 0100000000000000
+      - agent: 7
+        notInSize: 0100000002000000
       gameEvents: []
       list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: f11be0dfeef21f04591e8cbf7809c96e, type: 2}
-  - {fileID: 11400000, guid: e24b2cd63bdf6d443a7fa265ade7fcfd, type: 2}
+  - {fileID: 11400000, guid: 4ab0c1f7db6c6b243b2327d53e540a44, type: 2}
+  - {fileID: 11400000, guid: 00522cdfb0edbf84a8edfcf987ac523f, type: 2}
+  - {fileID: 11400000, guid: 5f3c684b13f331f4f9277a4f10bba4e1, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  currentScore: -1000
+  RemoveAgent: 
+  currentScore: 0

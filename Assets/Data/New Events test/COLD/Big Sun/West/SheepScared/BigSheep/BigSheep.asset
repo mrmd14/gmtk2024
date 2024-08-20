@@ -10,20 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: PeopleFreezing
+  m_Name: BigSheep
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'It is too cold and people are freezing. Go make the sun bigger.
+  eventText: 'The sheep are enormous now! sadly Their wool is everywhere and it''s
+    driving people crazy.
 
 '
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 11
+        notInSize: 0000000001000000
+      - agent: 7
+        notInSize: 02000000
+      gameEvents: []
+      list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: 3d1ccb11dbc546a45af7e5f298cff302, type: 2}
-  - {fileID: 11400000, guid: 9370ff7af4300ea4cb5f34e2c940a30b, type: 2}
+  - {fileID: 11400000, guid: a689e5a6d3837be458ff45404c874d21, type: 2}
+  - {fileID: 11400000, guid: 9b328f56df14bfe479cff0fd47776d23, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 

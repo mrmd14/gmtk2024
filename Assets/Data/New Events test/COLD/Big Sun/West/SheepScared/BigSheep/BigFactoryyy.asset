@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: PeopleFreezing
+  m_Name: BigFactoryyy
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'It is too cold and people are freezing. Go make the sun bigger.
-
-'
+  eventText: 'Robots are now equipped with vacuums and can clean the streets! '
   conditionSequence:
     score: 0
-    list: []
+    list:
+    - AgentInSize:
+      - agent: 9
+        notInSize: 0000000001000000
+      gameEvents: []
+      list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext:
-  - {fileID: 11400000, guid: 3d1ccb11dbc546a45af7e5f298cff302, type: 2}
-  - {fileID: 11400000, guid: 9370ff7af4300ea4cb5f34e2c940a30b, type: 2}
+  ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 

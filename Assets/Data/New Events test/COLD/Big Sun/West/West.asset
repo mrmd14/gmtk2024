@@ -10,25 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: BigHumanHeart
+  m_Name: West
   m_EditorClassIdentifier: 
-  ResolveText: "People suddenly went soft and could tolerate each other. \n"
-  eventText: "Although they look strangely at robots now\u2026\r"
+  ResolveText: 
+  eventText: When East goes underwater, People go to the West and there is a population
+    problem
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 14
+      - agent: 3
         notInSize: 0000000001000000
+      gameEvents: []
+      list: []
+      ExcludeEvents: []
+    - AgentInSize:
+      - agent: 4
+        notInSize: 0100000002000000
       gameEvents: []
       list: []
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: 4f28685c0d3b8bb478e27c39f94ef251, type: 2}
-  - {fileID: 11400000, guid: 8bedac71a62fa9845a3a0ec9db6d3837, type: 2}
+  - {fileID: 11400000, guid: a89b76cafe31c274b81ecde45f95fcb3, type: 2}
+  - {fileID: 11400000, guid: 9deb88be7d34f7c4a9950358e347f582, type: 2}
+  - {fileID: 11400000, guid: b0760101aae2e9a49a00482982c23479, type: 2}
+  - {fileID: 11400000, guid: 00522cdfb0edbf84a8edfcf987ac523f, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 
-  currentScore: -1000
+  RemoveAgent: 04000000
+  currentScore: 0
