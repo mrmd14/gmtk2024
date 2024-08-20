@@ -18,9 +18,9 @@ public class CityLogo : MonoBehaviour
     void FixedUpdate()
     {
         if (transform.position.x >0 ) benInCenter = true;
-        transform.position += Time.fixedDeltaTime * (benInCenter ? InCenterSpeed : toCenterSpeed) * Vector3.right;
+        transform.position += Time.fixedDeltaTime * (benInCenter && dur > 0 ? InCenterSpeed : toCenterSpeed) * Vector3.right;
 
         if (benInCenter) dur -= Time.fixedDeltaTime;
-        if (dur <= 0) gameObject.SetActive(false);
+        if (transform.position.x>20) gameObject.SetActive(false);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
+
 using UnityEngine.WSA;
 
 public class GamePlayManager : MonoBehaviour
@@ -27,8 +27,8 @@ public class GamePlayManager : MonoBehaviour
 
     private List<GameEvent> randomList= new List<GameEvent>();
 
-    public Text LastEventText;
-    public Text stats;
+    public TypewriterText LastEventText;
+
 
 
     public GameEvent last;
@@ -44,18 +44,29 @@ public class GamePlayManager : MonoBehaviour
 
 
 
+    public static bool inGamePlay = false;
+
+    public AddBtnToBox playBtn;
+
+
+    public Agent sun;
+
+    public static bool isSunBig => instance.sun.currentState == Agent.State.big;
+
 
 
 
     private void Awake()
     {
+        playBtn.action = Init;
         instance = this;
     }
 
     public void TriggerEvent(GameEvent gameEvent, bool skiped )
     {
         triggered[gameEvent] = true;
-        LastEventText.text = (skiped? "" :  gameEvent.ResolveText)+   gameEvent.eventText;
+        LastEventText.fullText = (skiped? "" :  gameEvent.ResolveText)+   gameEvent.eventText;
+        LastEventText.Init();
         gameEvent.ResultSequence.DoOnBase();
 
         foreach(var item in gameEvent.deBuffs)
@@ -75,15 +86,12 @@ public class GamePlayManager : MonoBehaviour
     }
 
 
-    private void Start()
-    {
-        Init();
-    }
+  
 
     private void Init()
     {
 
-
+        inGamePlay = true;
         debuffManager.Init();
 
         triggered.Clear();
@@ -132,6 +140,9 @@ public class GamePlayManager : MonoBehaviour
                 agentUI.init();
             }
         }
+
+
+        Cinematic.Init();
 
         RunRandomEvent();
  
@@ -247,17 +258,16 @@ public class GamePlayManager : MonoBehaviour
 
     private void Update()
     {
+        playBtn.transform.parent.gameObject.SetActive(!inGamePlay);
+        if (!inGamePlay) return;
         if (!isPlayerTurn)
         {
             DoEnv();
         }
         SetValues();
-        string statText = "";
-        foreach(var item in AttributeInitValMap)
-        {
-            statText += $"  {item.Key} = {AttributeData.values[item.Key]} ";
-        }
-        stats.text = statText;
+       
+       
+       
 
      
 

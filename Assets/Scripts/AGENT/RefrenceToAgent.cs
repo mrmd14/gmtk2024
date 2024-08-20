@@ -76,6 +76,9 @@ public class RefrenceToAgent : MonoBehaviour
 
     private void OnMouseEnter()
     {
+
+        SetCursor.SetCurserZoom();
+
         hovering = true;
 
         StageManager.instance.ScrollVal = 0;
@@ -86,6 +89,8 @@ public class RefrenceToAgent : MonoBehaviour
 
     private void OnMouseExit()
     {
+        SetCursor.SetCurserNormal();
+
         hovering = false;
 
     }
@@ -105,8 +110,8 @@ public class RefrenceToAgent : MonoBehaviour
     {
         if (agent.currentState == Agent.State.big) return;
         SetScale( Vector3.one * 1.3f);
-        
 
+        SetCursor.SetCurserZoomIn();
 
         agent.GoBig();
     }
@@ -115,7 +120,8 @@ public class RefrenceToAgent : MonoBehaviour
     {
         if (agent.currentState == Agent.State.small) return;
 
-    
+        SetCursor.SetCurserZoomOut();
+
         agent.GoSmall();
     }
 
@@ -138,6 +144,12 @@ public class RefrenceToAgent : MonoBehaviour
         return res;
 
     }
+
+    public void TurnOnMyStage()
+    {
+        StageManager.instance.TurnOnStage(stage, transform);
+    }
+
     private void Update()
     {
 
@@ -162,7 +174,7 @@ public class RefrenceToAgent : MonoBehaviour
 
         if (stage != null && StageManager.instance.ScrollVal >= 1)
         {
-            StageManager.instance.TurnOnStage(stage, transform);
+            TurnOnMyStage();
         }
 
         if (!GamePlayManager.isPlayerTurn) return;

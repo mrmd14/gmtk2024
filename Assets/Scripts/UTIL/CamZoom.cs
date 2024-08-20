@@ -17,8 +17,8 @@ public class CamZoom : MonoBehaviour
     public float speed = 3;
     static  float CurrentSpeedCo = 3;
 
-   public  static float target;
-    public static float ZoomTarget;
+   public  static float target=5;
+    public static float ZoomTarget=5;
 
     public static Transform targetFollow;
 
@@ -81,7 +81,7 @@ public class CamZoom : MonoBehaviour
 
             Camera.main.transform.position = MyLerp(Camera.main.transform.position, targetPos, Time.fixedDeltaTime * MoveToTargetSpeed * CurrentSpeedCo);
         }
-        chromaticAberration.intensity.value = zoomLeft*.5f;
+        chromaticAberration.intensity.value = zoomLeft*.1f;
         target = Mathf.Lerp(target, ZoomTarget, Time.deltaTime*speed );
         Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, target, Time.fixedDeltaTime* speed  );
     }
