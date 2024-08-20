@@ -158,10 +158,7 @@ public class Agent : MonoBehaviour
     }
 
 
-    private void Update()
-    {
-        print($"{gameObject} {currentState}");
-    }
+   
 
 
 

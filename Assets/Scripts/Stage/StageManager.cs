@@ -49,9 +49,9 @@ public class StageManager : MonoBehaviour
     public void TurnOnStage(Stage stage, Transform targetFollow, bool Force = false ) {
 
         if (stage == null) return;
-
+      
         stage = HandHeldManager.ManageEastWest(stage);
-
+      
 
         StartCoroutine(
                 ZoomAndWait(stage, Force, targetFollow));
