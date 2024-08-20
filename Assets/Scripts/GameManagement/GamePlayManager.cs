@@ -55,9 +55,11 @@ public class GamePlayManager : MonoBehaviour
 
 
 
-    public static bool CanZoom => inGamePlay && !Cinematic.anyCinematic ;
-    public static bool CanScale => inGamePlay && !Cinematic.anyCinematic&& !TypewriterText.isTyping;
+    public static bool CanZoom => inGamePlay && !Cinematic.anyCinematic  ;
+    public static bool CanScale => inGamePlay && !Cinematic.anyCinematic&& !TypewriterText.isTyping && !forceFeedBack;
 
+
+   static bool forceFeedBack = false;
 
     private void Awake()
     {
@@ -71,6 +73,11 @@ public class GamePlayManager : MonoBehaviour
         if (gameEvent.EndGame)
         {
             END.End();
+        }
+
+        if (gameEvent.ForceFeedBack)
+        {
+            forceFeedBack = gameEvent.ForceFeedBack;
         }
 
         else
@@ -105,6 +112,8 @@ public class GamePlayManager : MonoBehaviour
 
     public  void Init()
     {
+
+        forceFeedBack = false;
         playBtn.transform.parent.gameObject.SetActive(false);
         inGamePlay = true;
         debuffManager.Init();
@@ -210,7 +219,7 @@ public class GamePlayManager : MonoBehaviour
         {
 
 
-            if (runBackUp) return false;
+            if (runBackUp &&   last.ReadFromForNext.Count ==0 ) return false;
 
             return RunScoredEvent(false, true);
         }
@@ -277,7 +286,11 @@ public class GamePlayManager : MonoBehaviour
 
     private void Update()
     {
- 
+        if (forceFeedBack && Input.anyKeyDown)
+        {
+            forceFeedBack = false;
+            return;
+        }
         if (!inGamePlay) return;
         if (!isPlayerTurn)
         {

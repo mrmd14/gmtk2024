@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -15,6 +16,9 @@ public class HandHeldManager : MonoBehaviour
     public static HandHeldManager instance;
 
   static  List<Agent.Agents> managed = new List<Agent.Agents>();
+
+    public Stage west;
+    public Stage east;
 
     private void Awake()
     {
@@ -59,6 +63,19 @@ public class HandHeldManager : MonoBehaviour
                         k++;
                         continue;
                     }
+
+                    if(stage == instance.west && !stage.gameObject.activeSelf)
+                    {
+                        stage = instance.east;
+                    }
+                    if (stage == instance.east && !stage.gameObject.activeSelf)
+                    {
+                        stage = instance.west;
+                    }
+
+
+
+
                     instance.handhelds[k].btn.action  = ()=> StageManager.instance.TurnOnStage(stage, null, Force:true);
                     k++;
                 }

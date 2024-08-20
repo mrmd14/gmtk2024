@@ -32,6 +32,8 @@ public class GameEvent : ScriptableObject
     public bool MiniEnd;
 
 
+    public bool ForceFeedBack = false;
+
 
 
     public string MakeStr()
