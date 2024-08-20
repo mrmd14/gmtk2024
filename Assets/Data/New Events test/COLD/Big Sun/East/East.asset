@@ -35,7 +35,11 @@ MonoBehaviour:
   ReadFromForNext:
   - {fileID: 11400000, guid: 939dac170cd3210439566b3354002c8c, type: 2}
   - {fileID: 11400000, guid: 32fe538f82ab43748b9b8ffd734d99d0, type: 2}
+  - {fileID: 11400000, guid: 876118e348b19c64b99d6b2e1309e3dc, type: 2}
+  - {fileID: 11400000, guid: d3cb34b43c6c1944cb706018bb4fdce2, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 03000000
+  EndGame: 0
+  MiniEnd: 0
   currentScore: -1000
