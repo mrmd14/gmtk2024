@@ -20,6 +20,14 @@ public class StageManager : MonoBehaviour
 
     public void Init()
     {
+        foreach(var item in Stages)
+        {
+            foreach(var agent in item.refrenceToAgents)
+            {
+                agent.agent.Init();
+            }
+        }
+
         TurnOnStage(Stages[0],null,true);
     }
 

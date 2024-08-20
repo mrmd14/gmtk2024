@@ -28,6 +28,10 @@ public class GameEvent : ScriptableObject
     public List<Agent.Agents> RemoveAgent;
 
 
+    public bool EndGame;
+    public bool MiniEnd;
+
+
 
 
     public string MakeStr()
