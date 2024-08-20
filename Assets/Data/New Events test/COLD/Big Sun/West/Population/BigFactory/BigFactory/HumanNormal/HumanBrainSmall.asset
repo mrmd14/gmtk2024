@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: HumanBrainSmall
   m_EditorClassIdentifier: 
-  ResolveText: 'aliens and humans negotiate. Aliens take dogs as gifts with them.
+  ResolveText: 
+  eventText: 'aliens and humans negotiate. Aliens take dogs as gifts with them.
 
     they
     see humans are retarded and scam them by asking them for gas money. (Aliens don''t
     use gas in their spaceships) humanity is broke now!'
-  eventText: 
   conditionSequence:
     score: 0
     list:
@@ -31,9 +31,10 @@ MonoBehaviour:
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext:
-  - {fileID: 11400000, guid: 8898a1cf0814f9241927a026c414623b, type: 2}
+  ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
+  EndGame: 1
+  MiniEnd: 0
   currentScore: 0

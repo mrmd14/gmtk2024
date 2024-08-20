@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: BigRobot
   m_EditorClassIdentifier: 
+  ResolveText: 
   eventText: 'We don''t need taboo love! Robots are scary and dangerous and people
-    won''t get any ideas! They get hurt by them though
+    won''t get any ideas!
 
 '
   conditionSequence:
@@ -24,8 +25,13 @@ MonoBehaviour:
         notInSize: 0000000001000000
       gameEvents: []
       list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext: []
   deBuffs: []
+  deBuffsToResolve: []
+  RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 0
   currentScore: 0

@@ -18,7 +18,9 @@ MonoBehaviour:
   conditionSequence:
     score: 0
     list:
-    - AgentInSize: []
+    - AgentInSize:
+      - agent: 1
+        notInSize: 00000000
       gameEvents:
       - {fileID: 11400000, guid: 9deb88be7d34f7c4a9950358e347f582, type: 2}
       list: []
@@ -39,4 +41,6 @@ MonoBehaviour:
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 0
   currentScore: 0

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BigRobotHeart
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: "Love is love! First robot and human marriage happened. although some
-    people are not cool with this blasphemy! They are protesting and disturbing everyone.
-    \r\n"
+  eventText: 'Love is love! First robot and human marriage happened.
+
+'
   conditionSequence:
     score: 0
     list:
@@ -27,10 +27,10 @@ MonoBehaviour:
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext:
-  - {fileID: 11400000, guid: 821bf3b39b09c4646bee2b8dfb8c5927, type: 2}
-  - {fileID: 11400000, guid: 460c8983bf4a3f543b6488c0e64461b7, type: 2}
+  ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 1
   currentScore: 0

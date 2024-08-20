@@ -25,9 +25,13 @@ MonoBehaviour:
         notInSize: 0100000002000000
       gameEvents: []
       list: []
+      ExcludeEvents: []
   ResultSequence:
     attributeActions: []
   ReadFromForNext: []
   deBuffs: []
   deBuffsToResolve: []
+  RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 1
   currentScore: 0
