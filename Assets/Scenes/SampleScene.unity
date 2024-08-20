@@ -11147,6 +11147,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5028846414024719986, guid: 1a1e975d1b6a4aa4b842b047e346dda6, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 98e6367a35e7f91488c435a2418e3459, type: 3}
+    - target: {fileID: 5028846414024719986, guid: 1a1e975d1b6a4aa4b842b047e346dda6, type: 3}
       propertyPath: agent
       value: 
       objectReference: {fileID: 679806793}
@@ -11629,6 +11633,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 5.701
       objectReference: {fileID: 0}
+    - target: {fileID: 6218380637383698807, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d00e9834753070498300b317fc00d63, type: 3}
     - target: {fileID: 6218380637383698807, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: agent
       value: 
@@ -17121,7 +17129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   timerSecond: 0.2
-  interval: 1
+  interval: 0.5
   orginalText: GAMELOGO
   playBTN: {fileID: 1998591364}
   text: {fileID: 1962628734}
