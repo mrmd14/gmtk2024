@@ -27,6 +27,7 @@ public class TypewriterText : MonoBehaviour
 
     public void Init()
     {
+        StopAllCoroutines();
         StartCoroutine(TypeText());
     }
 

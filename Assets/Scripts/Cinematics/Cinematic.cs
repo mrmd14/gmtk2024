@@ -51,13 +51,13 @@ public class Cinematic : MonoBehaviour
     {
 
         
-        while (instance.uiTop.transform.localPosition.y > 4.48f)
+        while (instance.uiTop.transform.localPosition.y > 6.02f)
         {
 
             instance.uiTop.transform.position -= Time.deltaTime * Vector3.up * 15f;
             yield return null;
         }
-        while (instance.uiBot.transform.localPosition.y < -5.06f)
+        while (instance.uiBot.transform.localPosition.y < -4.59f)
         {
 
             instance.uiBot.transform.position += Time.deltaTime * Vector3.up * 15f;
@@ -89,7 +89,7 @@ public class Cinematic : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
-        while (instance.tajob.transform.localPosition.y < 1.7f)
+        while (instance.tajob.transform.localPosition.y < 1.5f)
         {
 
             instance.tajob.transform.position += Time.deltaTime * Vector3.up * 15f;
@@ -97,7 +97,7 @@ public class Cinematic : MonoBehaviour
         }
         canRunText = true;
 
-
+        anyCinematic = false;
 
     }
 }

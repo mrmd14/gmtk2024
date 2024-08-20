@@ -55,6 +55,9 @@ public class GamePlayManager : MonoBehaviour
 
 
 
+    public static bool CanZoom => inGamePlay && !Cinematic.anyCinematic;
+    public static bool CanScale => inGamePlay && !Cinematic.anyCinematic;
+
 
     private void Awake()
     {
@@ -64,6 +67,11 @@ public class GamePlayManager : MonoBehaviour
 
     public void TriggerEvent(GameEvent gameEvent, bool skiped )
     {
+
+        if (gameEvent.EndGame)
+        {
+            END.End();
+        }
         triggered[gameEvent] = true;
         LastEventText.fullText = (skiped? "" :  gameEvent.ResolveText)+   gameEvent.eventText;
         LastEventText.Init();
@@ -88,11 +96,15 @@ public class GamePlayManager : MonoBehaviour
 
   
 
-    private void Init()
+    public  void Init()
     {
-
+        playBtn.transform.parent.gameObject.SetActive(false);
         inGamePlay = true;
         debuffManager.Init();
+
+
+
+        END.instance.Clear();
 
         triggered.Clear();
 
@@ -258,7 +270,7 @@ public class GamePlayManager : MonoBehaviour
 
     private void Update()
     {
-        playBtn.transform.parent.gameObject.SetActive(!inGamePlay);
+ 
         if (!inGamePlay) return;
         if (!isPlayerTurn)
         {

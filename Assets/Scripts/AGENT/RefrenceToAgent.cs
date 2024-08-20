@@ -172,17 +172,18 @@ public class RefrenceToAgent : MonoBehaviour
 
         if (!anyHovering || agent == null) return;
 
-        if (stage != null && StageManager.instance.ScrollVal >= 1)
+        if ( GamePlayManager.CanZoom &&  stage != null && StageManager.instance.ScrollVal >= 1)
         {
             TurnOnMyStage();
         }
 
         if (!GamePlayManager.isPlayerTurn) return;
-        if (Input.GetMouseButtonDown(1))
+        if (!GamePlayManager.CanScale) return;
+        if (Input.GetMouseButtonDown(0))
         {
             GoBig();
         }
-        else if(Input.GetMouseButtonDown(0))
+        else if(Input.GetMouseButtonDown(1))
         {
             GoSmall();
         }
