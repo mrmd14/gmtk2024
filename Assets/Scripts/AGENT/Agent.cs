@@ -8,7 +8,7 @@ public class Agent : MonoBehaviour
 {
 
 
-
+    public Agent linkedAgent;
 
 
     public enum Agents
@@ -71,11 +71,13 @@ public class Agent : MonoBehaviour
     {
         if(newState != currentState)
         {
+            if(UI != null)
             LensDistEffect.instance.Do(UI.transform.position);
+            else LensDistEffect.instance.Do(Vector2.zero);
         }
     }
 
-    public void GoMid()
+    public void GoMid(bool val)
     {
 
         if (!GamePlayManager.isPlayerTurn) return;
@@ -90,10 +92,13 @@ public class Agent : MonoBehaviour
 
         GamePlayManager.EndPlayerTurn();
 
+
+        if (linkedAgent != null && val) linkedAgent.GoMid(false);
+
     }
 
 
-    public  void GoBig()
+    public  void GoBig(bool val)
     {
         if(currentState == State.big)
         {
@@ -101,22 +106,25 @@ public class Agent : MonoBehaviour
         }
         if(currentState == State.small)
         {
-            GoMid();
+            GoMid(val);
             return;
         }
         PostEffect(State.big);
 
+       
         UI.SetScale( Vector3.one * 1.3f);
         if (!GamePlayManager.isPlayerTurn) return;
         makeBig.DoOnBase();
         currentState = State.big;
         GamePlayManager.EndPlayerTurn();
 
+        if (linkedAgent != null && val) linkedAgent.GoBig(false);
+
 
 
     }
 
-    public void GoSmall()
+    public void GoSmall(bool val)
     {
         if (currentState == State.small)
         {
@@ -125,7 +133,7 @@ public class Agent : MonoBehaviour
 
         if (currentState == State.big)
         {
-            GoMid();
+            GoMid(val);
             return;
         }
         PostEffect(State.small);
@@ -135,6 +143,8 @@ public class Agent : MonoBehaviour
         currentState = State.small;
         GamePlayManager.EndPlayerTurn();
 
+
+        if (linkedAgent != null && val) linkedAgent.GoSmall(false);
 
 
 

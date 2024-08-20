@@ -65,8 +65,12 @@ public class Condition
         foreach(var item in AgentInSize)
         {
             Agent agent = null;
-            if(AgentManager.map.TryGetValue(item.agent,out agent))
+
+           
+            if (AgentManager.map.TryGetValue(item.agent,out agent))
             {
+               
+
                 if (item.notInSize.Contains(agent.currentState)) return false;
             }
         }

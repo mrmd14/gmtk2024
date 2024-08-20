@@ -66,8 +66,8 @@ public class RefrenceToAgent : MonoBehaviour
 
     public void init()
     {
-        
-     
+
+        agent.UI = this;
         hovering = false;
         SetScale (Vector3.one);
         
@@ -119,7 +119,7 @@ public class RefrenceToAgent : MonoBehaviour
 
         SetCursor.SetCurserZoomIn();
 
-        agent.GoBig();
+        agent.GoBig(true);
     }
 
     private void GoSmall()
@@ -128,7 +128,7 @@ public class RefrenceToAgent : MonoBehaviour
 
         SetCursor.SetCurserZoomOut();
 
-        agent.GoSmall();
+        agent.GoSmall(true);
     }
 
 

@@ -3782,6 +3782,8 @@ MonoBehaviour:
     agent: 10
   - instance: {fileID: 1945291896}
     agent: 11
+  - instance: {fileID: 1948118318}
+    agent: 12
 --- !u!4 &383251674
 Transform:
   m_ObjectHideFlags: 0
@@ -12309,7 +12311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1406861503191565826, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1406861503191565836, guid: c87bc402166616a419c4dd59c43ec9eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15835,6 +15837,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1753329093356078951, guid: 58cbfed691418f640bc413f09177080d, type: 3}
+      propertyPath: linkedAgent
+      value: 
+      objectReference: {fileID: 1276026498}
+    - target: {fileID: 2081637132019924625, guid: 58cbfed691418f640bc413f09177080d, type: 3}
+      propertyPath: linkedAgent
+      value: 
+      objectReference: {fileID: 1301221624}
     - target: {fileID: 2296153862029059800, guid: 58cbfed691418f640bc413f09177080d, type: 3}
       propertyPath: m_Name
       value: heart

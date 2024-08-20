@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class AgentManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class AgentManager : MonoBehaviour
 
     public static Dictionary<Agent.Agents, Agent> map = new Dictionary<Agent.Agents, Agent>();
     public static Dictionary<Agent, Stage> parentStage = new Dictionary<Agent, Stage>();
+
+
 
 
 
@@ -44,7 +47,8 @@ public class AgentManager : MonoBehaviour
 
     public static void Init()
     {
-        for(int i = 0; i < 24; ++i)
+        
+        for (int i = 0; i < 25; ++i)
         {
             SetVal((Agent.Agents)i, true);
         }

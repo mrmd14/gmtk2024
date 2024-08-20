@@ -23,7 +23,7 @@ public class StageManager : MonoBehaviour
     {
         foreach(var item in Stages)
         {
-            print($"{item} {item.refrenceToAgents.Count}  ");
+           
             foreach(var agent in item.refrenceToAgents)
             {
                 agent.agent.Init();
