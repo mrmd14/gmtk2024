@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using static Agent;
 
 public class StageManager : MonoBehaviour
 {
@@ -22,10 +23,11 @@ public class StageManager : MonoBehaviour
     {
         foreach(var item in Stages)
         {
+            print($"{item} {item.refrenceToAgents.Count}  ");
             foreach(var agent in item.refrenceToAgents)
             {
                 agent.agent.Init();
-
+              
                 AgentManager.parentStage[agent.agent] = item;
             }
         }
@@ -47,6 +49,8 @@ public class StageManager : MonoBehaviour
     public void TurnOnStage(Stage stage, Transform targetFollow, bool Force = false ) {
 
         if (stage == null) return;
+
+        stage = HandHeldManager.ManageEastWest(stage);
 
 
         StartCoroutine(

@@ -58,25 +58,18 @@ public class HandHeldManager : MonoBehaviour
                     Stage stage = null;
                     if (agentKey.agent == Agent.Agents.HUMAN && !TurnOnIfTurnOff.isWestActive) stage = instance.east;
                     else if (agentKey.agent == Agent.Agents.HUMAN && !TurnOnIfTurnOff.isEastActive) stage = instance.west;
+
                     else  if (!AgentManager.parentStage.TryGetValue(agent, out stage))
                     {
-
+                        print(agentKey.agent);
                         instance.handhelds[k].btn.action = null;
                         k++;
                         continue;
                     }
 
-                    if(stage == instance.west && !TurnOnIfTurnOff.isWestActive)
-                    {
-                        stage = instance.east;
-                    }
-                    if (stage == instance.east && !TurnOnIfTurnOff.isEastActive)
-                    {
-                        stage = instance.west;
-                    }
 
 
-
+                    stage = ManageEastWest(stage);
 
                     instance.handhelds[k].btn.action  = ()=> StageManager.instance.TurnOnStage(stage, null, Force:true);
                     k++;
@@ -84,5 +77,20 @@ public class HandHeldManager : MonoBehaviour
                
             }
         }
+    }
+
+    public static Stage ManageEastWest(Stage stage)
+    {
+        if (stage == instance.west && !TurnOnIfTurnOff.isWestActive)
+        {
+            stage = instance.east;
+        }
+        if (stage == instance.east && !TurnOnIfTurnOff.isEastActive)
+        {
+            stage = instance.west;
+        }
+
+        return stage;
+
     }
 }
