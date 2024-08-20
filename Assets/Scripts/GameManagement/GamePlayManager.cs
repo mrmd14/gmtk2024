@@ -55,8 +55,8 @@ public class GamePlayManager : MonoBehaviour
 
 
 
-    public static bool CanZoom => inGamePlay && !Cinematic.anyCinematic;
-    public static bool CanScale => inGamePlay && !Cinematic.anyCinematic;
+    public static bool CanZoom => inGamePlay && !Cinematic.anyCinematic ;
+    public static bool CanScale => inGamePlay && !Cinematic.anyCinematic&& !TypewriterText.isTyping;
 
 
     private void Awake()
@@ -87,7 +87,7 @@ public class GamePlayManager : MonoBehaviour
         foreach(var item in gameEvent.RemoveAgent)
         {
             print(item);
-            AgentManager.TurnOff(item);
+            AgentManager.SetVal(item, false);
         }
 
         isPlayerTurn = true;
@@ -102,7 +102,7 @@ public class GamePlayManager : MonoBehaviour
         inGamePlay = true;
         debuffManager.Init();
 
-
+        AgentManager.Init();
 
         END.instance.Clear();
 

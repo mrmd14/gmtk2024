@@ -10,7 +10,7 @@ public class TypewriterText : MonoBehaviour
 
     public TMP_Text textMeshPro;
     private StringBuilder currentText;
-    public bool isTyping;
+    public static bool isTyping;
 
     public static bool AnyKeyDown = false;
 
