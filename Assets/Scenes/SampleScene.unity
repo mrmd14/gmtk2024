@@ -7310,6 +7310,7 @@ MonoBehaviour:
   - {fileID: 1600037747}
   - {fileID: 541166501}
   - {fileID: 2094558016}
+  TurnOnEastOff: 1
 --- !u!1 &761471182
 GameObject:
   m_ObjectHideFlags: 0

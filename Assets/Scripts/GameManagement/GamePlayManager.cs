@@ -246,13 +246,7 @@ public class GamePlayManager : MonoBehaviour
 
         
         
-        // can skip 
-        if(RunScoredEvent(true, false))
-        {
-
-            triggered[lastLast] = true ;
-            return true;
-        }
+      
         TriggerEvent(last, skiped);
 
         return true;

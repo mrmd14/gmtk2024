@@ -28,7 +28,12 @@ public class AgentManager : MonoBehaviour
         Agent agent = null;
         if (!map.TryGetValue(agentKey, out agent)) return;
        
-        if (agent.UI == null) return; 
+        if (agent.UI == null) return;
+
+
+        if (!val && agentKey == Agent.Agents.WEST) TurnOnIfTurnOff.isWestActive = false;
+        if (!val && agentKey == Agent.Agents.EAST) TurnOnIfTurnOff.isEastActive = false;
+
         foreach (var item in agent.UI.links)
         {
             item.gameObject.SetActive(val);

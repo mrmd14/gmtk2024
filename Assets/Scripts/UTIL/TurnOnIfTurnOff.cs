@@ -11,8 +11,17 @@ public class TurnOnIfTurnOff : MonoBehaviour
 
 
 
+    public bool TurnOnEastOff = false;
+
+    public static bool isEastActive = true;
+    public static bool isWestActive = true;
+
+
+
     public void Init()
     {
+        isEastActive = true;
+        isWestActive = true;
         foreach (var item in turnOnn)
         {
             print(item);
@@ -23,9 +32,9 @@ public class TurnOnIfTurnOff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!target.activeSelf)
+        if ((TurnOnEastOff&& !isEastActive)|| (!TurnOnEastOff&& isWestActive))
         {
-            print("here ");
+            
             foreach(var item in turnOnn)
             {
                 item.gameObject.SetActive(true);
