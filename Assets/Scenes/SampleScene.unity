@@ -3201,6 +3201,7 @@ GameObject:
   - component: {fileID: 355896901}
   - component: {fileID: 355896903}
   - component: {fileID: 355896902}
+  - component: {fileID: 355896904}
   m_Layer: 0
   m_Name: dog2 (1)
   m_TagString: Untagged
@@ -3289,6 +3290,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &355896904
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355896900}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.84, y: 0.46}
+    newSize: {x: 0.73, y: 0.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.84, y: 0.46}
+  m_EdgeRadius: 0
 --- !u!1 &359671887
 GameObject:
   m_ObjectHideFlags: 0
@@ -20673,6 +20700,7 @@ GameObject:
   - component: {fileID: 2146649655}
   - component: {fileID: 2146649657}
   - component: {fileID: 2146649656}
+  - component: {fileID: 2146649658}
   m_Layer: 0
   m_Name: dog2 (2)
   m_TagString: Untagged
@@ -20761,6 +20789,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2146649658
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146649654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.79, y: 0.58}
+    newSize: {x: 0.73, y: 0.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.79, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1001 &1406861502283031231
 PrefabInstance:
   m_ObjectHideFlags: 0
