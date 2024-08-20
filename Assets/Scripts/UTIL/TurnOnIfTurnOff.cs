@@ -32,7 +32,7 @@ public class TurnOnIfTurnOff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((TurnOnEastOff&& !isEastActive)|| (!TurnOnEastOff&& isWestActive))
+        if ((TurnOnEastOff&& !isEastActive)|| (!TurnOnEastOff&&! isWestActive))
         {
             
             foreach(var item in turnOnn)

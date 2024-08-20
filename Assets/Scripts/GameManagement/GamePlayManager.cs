@@ -290,6 +290,8 @@ public class GamePlayManager : MonoBehaviour
         if (forceFeedBack && Input.anyKeyDown)
         {
             forceFeedBack = false;
+
+            DoEnv();
             return;
         }
         if (!inGamePlay) return;
