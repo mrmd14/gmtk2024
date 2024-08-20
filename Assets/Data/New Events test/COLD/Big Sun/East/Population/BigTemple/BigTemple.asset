@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: BigTemple
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'People sleep in the temple now. They begin to dig into religion and
-    spirituality really hard! I wonder where this would lead. '
+  eventText: People sleep in the temple now. They begin to dig into religion and
+    spirituality really hard! Monks claim that they communicated with angels through
+    their callings and that they are coming to earth!
   conditionSequence:
     score: 0
     list:
@@ -27,11 +28,14 @@ MonoBehaviour:
   ResultSequence:
     attributeActions: []
   ReadFromForNext:
-  - {fileID: 11400000, guid: b5daa9fd6e5641043b4c41d5901df068, type: 2}
-  - {fileID: 11400000, guid: aef60d51cb586ec49bfbeb384513506f, type: 2}
+  - {fileID: 11400000, guid: 2be9417575816434ba9795a2dfe0a955, type: 2}
+  - {fileID: 11400000, guid: 0f246cd3524f7904898bf2974b3b0b71, type: 2}
+  - {fileID: 11400000, guid: ffe07d7062538734ab1ff249562aa0d6, type: 2}
+  - {fileID: 11400000, guid: 05663aa3c5272ca489e00b9d32bf1e6e, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
   EndGame: 0
   MiniEnd: 0
+  ForceFeedBack: 0
   currentScore: 0

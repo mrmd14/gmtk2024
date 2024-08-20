@@ -36,4 +36,5 @@ MonoBehaviour:
   RemoveAgent: 
   EndGame: 0
   MiniEnd: 0
-  currentScore: 0
+  ForceFeedBack: 0
+  currentScore: -1000
