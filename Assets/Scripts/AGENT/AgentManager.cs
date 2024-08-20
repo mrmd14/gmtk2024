@@ -22,7 +22,7 @@ public class AgentManager : MonoBehaviour
 
 
 
-    public static void TurnOff(Agent.Agents agentKey )
+    public static void SetVal(Agent.Agents agentKey, bool val  )
     {
         Agent agent = null;
         if (!map.TryGetValue(agentKey, out agent)) return;
@@ -30,10 +30,18 @@ public class AgentManager : MonoBehaviour
         if (agent.UI == null) return; 
         foreach (var item in agent.UI.links)
         {
-            item.gameObject.SetActive(false);
+            item.gameObject.SetActive(val);
 
         }
-        agent.UI.gameObject.SetActive(false);
+        agent.UI.gameObject.SetActive(val);
+    }
+
+    public static void Init()
+    {
+        for(int i = 0; i < 24; ++i)
+        {
+            SetVal((Agent.Agents)i, true);
+        }
     }
 
     private void Awake()

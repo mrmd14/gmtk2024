@@ -87,7 +87,7 @@ public class GamePlayManager : MonoBehaviour
         foreach(var item in gameEvent.RemoveAgent)
         {
             print(item);
-            AgentManager.TurnOff(item);
+            AgentManager.SetVal(item, false);
         }
 
         isPlayerTurn = true;
@@ -102,7 +102,7 @@ public class GamePlayManager : MonoBehaviour
         inGamePlay = true;
         debuffManager.Init();
 
-
+        AgentManager.Init();
 
         END.instance.Clear();
 
