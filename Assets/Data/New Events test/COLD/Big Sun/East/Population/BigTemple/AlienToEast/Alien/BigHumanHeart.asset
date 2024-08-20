@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BigHumanHeart
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: "well, monks were right! Aliens are here and it seems like they wanna
-    welcome their stay.\r aliens get influenced by humans' kindness and join them
-    on the journey to find god!"
+  eventText: "Aliens are here and it seems like they wanna welcome their stay.\r
+    aliens get influenced by humans' kindness and join them on the journey to find
+    god!"
   conditionSequence:
     score: 0
     list:
@@ -34,4 +34,4 @@ MonoBehaviour:
   EndGame: 0
   MiniEnd: 1
   ForceFeedBack: 1
-  currentScore: 0
+  currentScore: -1000

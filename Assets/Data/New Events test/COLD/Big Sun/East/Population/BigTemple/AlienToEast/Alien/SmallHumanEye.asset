@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: SmallHumanEye
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'well, monks were right! Aliens are here and it seems like they wanna
-    welcome their stay.
+  eventText: 'Aliens are here and it seems like they wanna welcome their stay.
 
-    aliens notice humans can''t see them. So they started
-    stealing everything. Now it''s just plain ground with some weird and blind dudes
-    on it. And they are soon gonna die out of starvation too!'
+    aliens
+    notice humans can''t see them. So they started stealing everything. Now it''s
+    just plain ground with some weird and blind dudes on it. And they are soon gonna
+    die out of starvation too!'
   conditionSequence:
     score: 0
     list:
@@ -36,4 +36,5 @@ MonoBehaviour:
   RemoveAgent: 
   EndGame: 1
   MiniEnd: 0
-  currentScore: 0
+  ForceFeedBack: 0
+  currentScore: -1000
