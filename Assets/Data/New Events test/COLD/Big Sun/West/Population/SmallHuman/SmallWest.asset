@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: SmallWest
   m_EditorClassIdentifier: 
-  ResolveText: 'The city is now smaller and people have to walk less. (You think
-    it doesn''t make sense but hey, you reduced the size of the sun so let it go)
-    but '
-  eventText: there is less food and resources! People have to live on a budget from
-    now on
+  ResolveText: 
+  eventText: The city is now smaller and people have to walk less. (You think it
+    doesn't make sense but hey, you reduced the size of the sun so let it go) but
+    there is less food and resources! People have to live on a budget from now on
   conditionSequence:
     score: 0
     list:
@@ -34,4 +33,5 @@ MonoBehaviour:
   RemoveAgent: 
   EndGame: 0
   MiniEnd: 1
+  ForceFeedBack: 1
   currentScore: 0

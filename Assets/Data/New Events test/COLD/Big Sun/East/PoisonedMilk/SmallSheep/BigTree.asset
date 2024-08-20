@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: BigTree
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: "Bigger trees mean bigger fruit! People have a good source of food.
-    But the leaves are everywhere and they make too much noise when stepped on.\r"
+  eventText: Bigger trees mean bigger fruit! People have a good source of food.
   conditionSequence:
     score: 0
     list:
@@ -31,5 +30,6 @@ MonoBehaviour:
   deBuffsToResolve: []
   RemoveAgent: 
   EndGame: 0
-  MiniEnd: 0
+  MiniEnd: 1
+  ForceFeedBack: 1
   currentScore: 0
