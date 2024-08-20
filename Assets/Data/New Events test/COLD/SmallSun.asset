@@ -29,4 +29,6 @@ MonoBehaviour:
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
+  EndGame: 1
+  MiniEnd: 0
   currentScore: 0

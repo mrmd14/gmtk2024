@@ -10,30 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: HumanHeartSmall
+  m_Name: RoboMarriageBad
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'when aliens see that humans are so big, they fear and try to befriend
-    them
-
-    humans don''t accept and take them as slaves. Humanity rolls tbh! '
+  eventText: "Robot and human marriage? some people are not cool with this blasphemy!
+    They are protesting and disturbing everyone. \r"
   conditionSequence:
     score: 0
     list:
-    - AgentInSize:
-      - agent: 6
-        notInSize: 0000000001000000
-      - agent: 14
-        notInSize: 0100000002000000
-      gameEvents: []
+    - AgentInSize: []
+      gameEvents:
+      - {fileID: 11400000, guid: 8bedac71a62fa9845a3a0ec9db6d3837, type: 2}
       list: []
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: 821bf3b39b09c4646bee2b8dfb8c5927, type: 2}
+  - {fileID: 11400000, guid: 460c8983bf4a3f543b6488c0e64461b7, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
   EndGame: 0
-  MiniEnd: 1
+  MiniEnd: 0
   currentScore: 0

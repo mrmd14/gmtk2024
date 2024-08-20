@@ -10,30 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: HumanHeartSmall
+  m_Name: AlienComing
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'when aliens see that humans are so big, they fear and try to befriend
-    them
-
-    humans don''t accept and take them as slaves. Humanity rolls tbh! '
+  eventText: spirituality is rising through the roof! Monks claim that they communicated
+    with angels through their callings and that they are coming to earth!
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 6
-        notInSize: 0000000001000000
-      - agent: 14
-        notInSize: 0100000002000000
-      gameEvents: []
+      - agent: 1
+        notInSize: 00000000
+      gameEvents:
+      - {fileID: 11400000, guid: d3cb34b43c6c1944cb706018bb4fdce2, type: 2}
       list: []
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: ffe07d7062538734ab1ff249562aa0d6, type: 2}
+  - {fileID: 11400000, guid: 0f246cd3524f7904898bf2974b3b0b71, type: 2}
+  - {fileID: 11400000, guid: 2be9417575816434ba9795a2dfe0a955, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
   EndGame: 0
-  MiniEnd: 1
+  MiniEnd: 0
   currentScore: 0

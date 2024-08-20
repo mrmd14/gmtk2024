@@ -10,30 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: HumanHeartSmall
+  m_Name: AlienNotComing
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'when aliens see that humans are so big, they fear and try to befriend
-    them
-
-    humans don''t accept and take them as slaves. Humanity rolls tbh! '
+  eventText: 'Scientists came up with a way to communicate with aliens! They sent
+    them a message inviting them to the earth. '
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 6
-        notInSize: 0000000001000000
-      - agent: 14
+      - agent: 1
         notInSize: 0100000002000000
-      gameEvents: []
+      gameEvents:
+      - {fileID: 11400000, guid: 9deb88be7d34f7c4a9950358e347f582, type: 2}
+      list: []
+      ExcludeEvents: []
+    - AgentInSize:
+      - agent: 1
+        notInSize: 0100000002000000
+      gameEvents:
+      - {fileID: 11400000, guid: 9b328f56df14bfe479cff0fd47776d23, type: 2}
       list: []
       ExcludeEvents: []
   ResultSequence:
     attributeActions: []
-  ReadFromForNext: []
+  ReadFromForNext:
+  - {fileID: 11400000, guid: 05663aa3c5272ca489e00b9d32bf1e6e, type: 2}
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
   EndGame: 0
-  MiniEnd: 1
+  MiniEnd: 0
   currentScore: 0

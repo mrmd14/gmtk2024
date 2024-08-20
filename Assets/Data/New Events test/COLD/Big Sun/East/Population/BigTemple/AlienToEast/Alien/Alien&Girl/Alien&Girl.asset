@@ -10,22 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: HumanHeartSmall
+  m_Name: Alien&Girl
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'when aliens see that humans are so big, they fear and try to befriend
-    them
-
-    humans don''t accept and take them as slaves. Humanity rolls tbh! '
+  eventText: one of the aliens is in town and trying to make a girl marry her! This
+    is interesting
   conditionSequence:
     score: 0
     list:
-    - AgentInSize:
-      - agent: 6
-        notInSize: 0000000001000000
-      - agent: 14
-        notInSize: 0100000002000000
-      gameEvents: []
+    - AgentInSize: []
+      gameEvents:
+      - {fileID: 11400000, guid: aef60d51cb586ec49bfbeb384513506f, type: 2}
       list: []
       ExcludeEvents: []
   ResultSequence:
@@ -35,5 +30,5 @@ MonoBehaviour:
   deBuffsToResolve: []
   RemoveAgent: 
   EndGame: 0
-  MiniEnd: 1
+  MiniEnd: 0
   currentScore: 0

@@ -10,19 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
-  m_Name: HumanHeartSmall
+  m_Name: HumanBrainFight
   m_EditorClassIdentifier: 
   ResolveText: 
-  eventText: 'when aliens see that humans are so big, they fear and try to befriend
-    them
+  eventText: 'People cant accept this and kill the alien!
 
-    humans don''t accept and take them as slaves. Humanity rolls tbh! '
+    aliens and humans
+    get in to a war! Aliens kill humans with their super duper guns and revenge their
+    mate.'
   conditionSequence:
     score: 0
     list:
     - AgentInSize:
-      - agent: 6
-        notInSize: 0000000001000000
+      - agent: 13
+        notInSize: 0100000002000000
+      gameEvents:
+      - {fileID: 11400000, guid: 0f246cd3524f7904898bf2974b3b0b71, type: 2}
+      list: []
+      ExcludeEvents: []
+    - AgentInSize:
       - agent: 14
         notInSize: 0100000002000000
       gameEvents: []
@@ -34,6 +40,6 @@ MonoBehaviour:
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
-  EndGame: 0
-  MiniEnd: 1
+  EndGame: 1
+  MiniEnd: 0
   currentScore: 0

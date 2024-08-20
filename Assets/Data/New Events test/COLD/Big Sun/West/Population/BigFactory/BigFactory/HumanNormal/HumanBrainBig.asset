@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010957c73e329544a5979ba6733c878, type: 3}
   m_Name: HumanBrainBig
   m_EditorClassIdentifier: 
-  ResolveText: "aliens and humans negotiate. Aliens take dogs as gifts with them.\nthey
-    give humans special space suits and leaves. Humans can now move in space easily.
-    \n"
-  eventText: 
+  ResolveText: '
+
+'
+  eventText: 'aliens and humans negotiate. Aliens take dogs as gifts with them.
+
+    they
+    give humans special space suits and leaves. Humans can now move in space easily. '
   conditionSequence:
     score: 0
     list:
@@ -33,4 +36,6 @@ MonoBehaviour:
   deBuffs: []
   deBuffsToResolve: []
   RemoveAgent: 
+  EndGame: 0
+  MiniEnd: 1
   currentScore: 0

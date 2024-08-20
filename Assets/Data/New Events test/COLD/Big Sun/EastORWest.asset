@@ -31,5 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0cbaf7f81affa1848a24e225ad53465a, type: 2}
   deBuffs: []
   deBuffsToResolve: []
-  RemoveAgent: 
+  RemoveAgent: 05000000
+  EndGame: 0
+  MiniEnd: 0
   currentScore: 0
